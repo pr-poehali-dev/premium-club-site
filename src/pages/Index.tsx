@@ -52,16 +52,16 @@ const Screenshot = ({ label, sublabel, id }: { label: string; sublabel: string; 
 
 const SectionTitle = ({ title, sub }: { title: string; sub?: string }) => (
   <Reveal>
-    <div className="pt-14 md:pt-24 mb-8">
+    <div className="section-spacing mb-8">
       <div className="neon-divider mb-8" />
-      <h2 className="font-oswald text-3xl md:text-4xl font-bold">{title}</h2>
-      {sub && <p className="text-white/30 text-sm mt-2 leading-relaxed">{sub}</p>}
+      <h2 className="font-oswald fluid-h2 font-bold">{title}</h2>
+      {sub && <p className="text-white/30 fluid-xs mt-3 leading-relaxed">{sub}</p>}
     </div>
   </Reveal>
 );
 
 const P = ({ children, accent }: { children: React.ReactNode; accent?: boolean }) => (
-  <p className={`text-base leading-[1.9] mb-5 ${accent ? 'text-white/80 font-medium' : 'text-white/55'}`}>{children}</p>
+  <p className={`mb-6 ${accent ? 'text-white/80 font-medium fluid-body-lg' : 'text-white/55 fluid-body'}`}>{children}</p>
 );
 const G = ({ children }: { children: React.ReactNode }) => <span style={{ color: '#00ff88' }}>{children}</span>;
 const W = ({ children }: { children: React.ReactNode }) => <span className="text-white font-semibold">{children}</span>;
@@ -72,10 +72,10 @@ const MidCTA = () => (
       style={{ background: 'rgba(0,255,136,0.03)', border: '1px solid rgba(0,255,136,0.1)' }}>
       <div className="shimmer absolute inset-0 pointer-events-none" />
       <div className="relative z-10">
-        <a href="#занять-место" className="neon-btn px-8 py-3.5 text-sm rounded-lg inline-flex items-center gap-2 uppercase tracking-widest">
+        <a href="#занять-место" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest">
           <Icon name="ArrowRight" size={16} /> Занять место — 9 900 ₽
         </a>
-        <div className="text-xs text-white/20 mt-3">Один раз. Навсегда. Все обновления бесплатно.</div>
+        <div className="fluid-xs text-white/20 mt-3">Один раз. Навсегда. Все обновления бесплатно.</div>
       </div>
     </div>
   </Reveal>
@@ -84,10 +84,10 @@ const MidCTA = () => (
 const FAQItem = ({ q, a, open, onClick }: { q: string; a: string; open: boolean; onClick: () => void }) => (
   <div className={`faq-item mb-2 ${open ? 'open' : ''}`}>
     <button onClick={onClick} className="w-full flex items-center justify-between px-5 py-4 text-left">
-      <span className="text-sm text-white/75 font-medium pr-4">{q}</span>
+      <span className="fluid-sm text-white/75 font-medium pr-4">{q}</span>
       <Icon name={open ? "Minus" : "Plus"} size={16} className="flex-shrink-0" style={{ color: open ? '#00ff88' : 'rgba(255,255,255,0.2)' } as React.CSSProperties} />
     </button>
-    {open && <div className="px-5 pb-4 text-sm text-white/45 leading-relaxed" style={{ borderTop: '1px solid rgba(0,255,136,0.06)' }}><div className="pt-3">{a}</div></div>}
+    {open && <div className="px-5 pb-4 fluid-sm text-white/45" style={{ borderTop: '1px solid rgba(0,255,136,0.06)' }}><div className="pt-3">{a}</div></div>}
   </div>
 );
 
@@ -106,9 +106,9 @@ export default function Index() {
     <div className="min-h-screen bg-background text-foreground font-golos overflow-x-hidden noise-overlay">
 
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5" style={{ background: 'rgba(10,10,10,0.85)', backdropFilter: 'blur(20px)' }}>
-        <div className="container mx-auto px-4 h-14 flex items-center justify-between">
-          <div className="font-oswald text-sm font-bold tracking-widest">AI <G>MODELS</G> FACTORY</div>
-          <a href="#занять-место" className="neon-btn px-4 py-1.5 text-xs rounded-md uppercase tracking-widest">Занять место</a>
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <div className="font-oswald fluid-xs font-bold tracking-widest">AI <G>MODELS</G> FACTORY</div>
+          <a href="#занять-место" className="neon-btn fluid-btn-sm rounded-md uppercase tracking-widest">Занять место</a>
         </div>
       </nav>
 
@@ -124,39 +124,39 @@ export default function Index() {
         <div className="hero-line absolute top-2/3 right-0 w-[200px]" style={{ background: 'linear-gradient(to left, transparent, rgba(168,85,247,0.2), transparent)' }} />
         <div className="absolute top-1/2 right-16 w-px h-32 hidden md:block" style={{ background: 'linear-gradient(to bottom, rgba(0,255,136,0.3), transparent)' }} />
 
-        <div className="container mx-auto px-4 relative z-10 py-20 md:py-32">
-          <div className="max-w-2xl">
+        <div className="container mx-auto px-4 relative z-10 py-20 md:py-32 lg:py-40">
+          <div className="max-w-3xl">
             <Reveal>
-              <h1 className="font-oswald text-5xl md:text-7xl font-bold leading-[1.02] mb-6">
+              <h1 className="font-oswald fluid-hero font-bold leading-[1.02] mb-8">
                 <span className="gradient-text">$745 за 8 дней.</span><br />
-                <span className="text-white text-4xl md:text-5xl">Виртуальный инфлюенсер.</span><br />
-                <span className="text-white text-4xl md:text-5xl">Настоящие деньги.</span>
+                <span className="text-white fluid-hero-sub">Виртуальный инфлюенсер.</span><br />
+                <span className="text-white fluid-hero-sub">Настоящие деньги.</span>
               </h1>
             </Reveal>
             <Reveal delay={150}>
-              <p className="text-white/50 text-lg md:text-xl leading-relaxed max-w-xl mb-4">Как я создал несуществующего человека с помощью нейросети — и он приносит мне деньги каждый день.</p>
+              <p className="text-white/50 fluid-body-lg max-w-2xl mb-5">Как я создал несуществующего человека с помощью нейросети — и он приносит мне деньги каждый день.</p>
             </Reveal>
             <Reveal delay={250}>
-              <p className="text-white/30 text-sm leading-relaxed max-w-lg mb-10">Не нужно своё лицо. Не нужен опыт. Не нужно быть технарём. Нужен ноутбук, $50 на старт и 2–3 часа в день.</p>
+              <p className="text-white/30 fluid-sm max-w-xl mb-12">Не нужно своё лицо. Не нужен опыт. Не нужно быть технарём. Нужен ноутбук, $50 на старт и 2–3 часа в день.</p>
             </Reveal>
             <Reveal delay={350}>
               <div className="flex flex-col sm:flex-row gap-3">
-                <a href="#цифры" className="neon-btn px-6 py-3.5 text-sm rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Читать историю <Icon name="ChevronDown" size={16} /></a>
-                <a href="#занять-место" className="neon-btn-outline px-6 py-3.5 text-sm rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Занять место <Icon name="ArrowRight" size={16} /></a>
+                <a href="#цифры" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Читать историю <Icon name="ChevronDown" size={16} /></a>
+                <a href="#занять-место" className="neon-btn-outline fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Занять место <Icon name="ArrowRight" size={16} /></a>
               </div>
             </Reveal>
           </div>
         </div>
-        <div className="absolute bottom-16 right-8 hidden lg:block w-64 float">
+        <div className="absolute bottom-16 right-8 hidden lg:block w-72 xl:w-80 float">
           <div className="screenshot-frame rounded-lg overflow-hidden opacity-60"><img src={DASHBOARD_IMG} alt="" className="w-full" /></div>
         </div>
       </section>
 
-      <div className="max-w-2xl mx-auto px-4 relative z-10">
+      <div className="content-width relative z-10">
 
         {/* ЦИФРЫ */}
-        <section id="цифры" className="pt-16 md:pt-24 pb-6 section-glow-green">
-          <Reveal><h2 className="font-oswald text-3xl md:text-4xl font-bold mb-2">Цифры</h2><p className="text-white/30 text-sm mb-8">Мой реальный доход. Одна модель. Я один.</p></Reveal>
+        <section id="цифры" className="section-spacing pb-6 section-glow-green">
+          <Reveal><h2 className="font-oswald fluid-h2 font-bold mb-3">Цифры</h2><p className="text-white/30 fluid-xs mb-8">Мой реальный доход. Одна модель. Я один.</p></Reveal>
           <Reveal><P>Апрель 2026, первые 8 дней.</P></Reveal>
           <Screenshot id="april-income" label="Доход за апрель — $745 за 8 дней" sublabel="Скриншот дашборда с реальными выплатами" />
           <Reveal><P>Два месяца назад было $927 за полтора месяца. Сейчас столько набегает за полторы недели. <W>Рост в 18 раз</W> с первого месяца.</P></Reveal>
@@ -169,11 +169,11 @@ export default function Index() {
                 { label: "Апрель, 8 дней", val: "$745", w: "100%", dim: false, glow: true },
               ].map(r => (
                 <div key={r.label} className="flex items-center gap-3">
-                  <div className="w-28 text-xs text-white/35 font-oswald tracking-wide text-right flex-shrink-0">{r.label}</div>
+                  <div className="w-32 fluid-xs text-white/35 font-oswald tracking-wide text-right flex-shrink-0">{r.label}</div>
                   <div className="flex-1 h-2.5 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.04)' }}>
                     <div className="h-full rounded-full transition-all duration-1000" style={{ width: r.w, background: r.glow ? 'linear-gradient(90deg, #00ff88, #00e5ff)' : r.dim ? 'rgba(255,255,255,0.12)' : 'linear-gradient(90deg, #00ff88, #00e5ff)', opacity: r.dim ? 0.5 : 1, boxShadow: r.glow ? '0 0 15px rgba(0,255,136,0.5)' : 'none' }} />
                   </div>
-                  <span className="font-oswald text-sm font-bold w-14 flex-shrink-0" style={r.glow ? { color: '#00ff88', textShadow: '0 0 10px rgba(0,255,136,0.5)' } : r.dim ? { color: 'rgba(255,255,255,0.3)' } : { color: 'white' }}>{r.val}</span>
+                  <span className="font-oswald fluid-sm font-bold w-16 flex-shrink-0" style={r.glow ? { color: '#00ff88', textShadow: '0 0 10px rgba(0,255,136,0.5)' } : r.dim ? { color: 'rgba(255,255,255,0.3)' } : { color: 'white' }}>{r.val}</span>
                 </div>
               ))}
             </div>
@@ -190,7 +190,7 @@ export default function Index() {
         <Reveal><P accent>Это не фантазия. Это уже работающая индустрия:</P></Reveal>
         <Reveal>
           <div className="rounded-xl p-6 mb-6" style={{ background: 'rgba(0,255,136,0.03)', border: '1px solid rgba(0,255,136,0.1)' }}>
-            <div className="space-y-4 text-sm">
+            <div className="space-y-4 fluid-sm">
               {[
                 { icon: "Globe", text: <>Рынок инфлюенсер-маркетинга — <W>$24 млрд</W> в 2025 году. Прогноз — $71 млрд к 2032</> },
                 { icon: "User", text: <>AI-модель Aitana Lopez (Испания) — <W>€10,000/мес</W>. Создана двумя дизайнерами</> },
@@ -210,7 +210,7 @@ export default function Index() {
         <Reveal>
           <div className="space-y-2 mb-6">
             {[["Megaphone", "Реклама — бренды платят за размещение у инфлюенсера с аудиторией"], ["ShoppingBag", "Свои продукты — направляешь трафик куда хочешь"], ["CreditCard", "Платные площадки — подписчики платят за эксклюзивный контент и общение"]].map(([icon, text]) => (
-              <div key={text} className="flex items-start gap-3"><Icon name={icon} size={16} className="flex-shrink-0 mt-1" style={{ color: '#00e5ff' } as React.CSSProperties} /><span className="text-white/55 text-sm leading-relaxed">{text}</span></div>
+              <div key={text} className="flex items-start gap-3"><Icon name={icon} size={16} className="flex-shrink-0 mt-1" style={{ color: '#00e5ff' } as React.CSSProperties} /><span className="text-white/55 fluid-sm">{text}</span></div>
             ))}
           </div>
         </Reveal>
@@ -237,10 +237,10 @@ export default function Index() {
             { title: "Ошибка 2: убил неделю на настройку генерации", text: "Нейросеть которая запоминает лицо персонажа — штука капризная. Первые три попытки были мусором: лицо то не похоже, то «поплыло»." },
             { title: "Ошибка 3: не умел общаться с подписчиками", text: "Человек подписывается, пишет «привет» — а я не знаю что ответить. Он уходит. $20–50 потенциального дохода испарились." },
           ].map((e, i) => (
-            <Reveal key={e.title} delay={i * 100}><div className="error-card rounded-lg p-5 pl-7"><div className="text-sm font-medium text-white/70 mb-2">{e.title}</div><p className="text-white/40 text-sm leading-relaxed">{e.text}</p></div></Reveal>
+            <Reveal key={e.title} delay={i * 100}><div className="error-card rounded-lg p-5 pl-7"><div className="fluid-sm font-medium text-white/70 mb-2">{e.title}</div><p className="text-white/40 fluid-sm">{e.text}</p></div></Reveal>
           ))}
         </div>
-        <Reveal><div className="rounded-xl p-5" style={{ background: 'rgba(0,255,136,0.04)', border: '1px solid rgba(0,255,136,0.12)' }}><p className="text-sm leading-relaxed" style={{ color: 'rgba(0,255,136,0.85)' }}>Когда закрыл все три ошибки — рост пошёл моментально. С $40 до $745 за 8 дней. Те самые ошибки, на которые я потратил 2 месяца — <strong>в клубе закрыты с первого дня.</strong></p></div></Reveal>
+        <Reveal><div className="rounded-xl p-5" style={{ background: 'rgba(0,255,136,0.04)', border: '1px solid rgba(0,255,136,0.12)' }}><p className="fluid-sm leading-relaxed" style={{ color: 'rgba(0,255,136,0.85)' }}>Когда закрыл все три ошибки — рост пошёл моментально. С $40 до $745 за 8 дней. Те самые ошибки, на которые я потратил 2 месяца — <strong>в клубе закрыты с первого дня.</strong></p></div></Reveal>
 
         {/* КАК ЭТО РАБОТАЕТ */}
         <SectionTitle title="Как это работает" sub="4 шага от нуля до первых денег" />
@@ -254,20 +254,20 @@ export default function Index() {
             <Reveal key={s.n} delay={i * 80}>
               <div className="step-card rounded-lg p-5 pl-7">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-3"><span className="font-oswald text-sm font-bold" style={{ color: '#00ff88' }}>{s.n}.</span><span className="text-white/80 text-sm font-medium">{s.title}</span></div>
-                  <span className="text-xs font-oswald px-2 py-0.5 rounded flex-shrink-0" style={{ background: 'rgba(0,255,136,0.06)', color: 'rgba(0,255,136,0.5)', border: '1px solid rgba(0,255,136,0.1)' }}>{s.time}</span>
+                  <div className="flex items-center gap-3"><span className="font-oswald fluid-sm font-bold" style={{ color: '#00ff88' }}>{s.n}.</span><span className="text-white/80 fluid-sm font-medium">{s.title}</span></div>
+                  <span className="fluid-xs font-oswald px-2 py-0.5 rounded flex-shrink-0" style={{ background: 'rgba(0,255,136,0.06)', color: 'rgba(0,255,136,0.5)', border: '1px solid rgba(0,255,136,0.1)' }}>{s.time}</span>
                 </div>
-                <p className="text-white/40 text-sm leading-relaxed">{s.text}</p>
+                <p className="text-white/40 fluid-sm">{s.text}</p>
               </div>
             </Reveal>
           ))}
         </div>
-        <Reveal><div className="text-center py-4 rounded-lg font-oswald text-sm tracking-wider" style={{ background: 'linear-gradient(135deg, rgba(0,255,136,0.06), rgba(0,229,255,0.04))', border: '1px solid rgba(0,255,136,0.12)', color: '#00ff88' }}>Стоимость запуска одного персонажа от нуля до первого видео: $15–20</div></Reveal>
+        <Reveal><div className="text-center py-5 rounded-lg font-oswald fluid-sm tracking-wider" style={{ background: 'linear-gradient(135deg, rgba(0,255,136,0.06), rgba(0,229,255,0.04))', border: '1px solid rgba(0,255,136,0.12)', color: '#00ff88' }}>Стоимость запуска одного персонажа от нуля до первого видео: $15–20</div></Reveal>
 
         {/* ГДЕ ПОДВОХ */}
         <SectionTitle title="Где подвох" sub="Создать персонажа — это 10% дела" />
         <Reveal><P accent>Остальные 90% — привлечь аудиторию и превратить её в деньги.</P></Reveal>
-        <Reveal><div className="space-y-2 mb-6">{["Сделал красивый контент — а куда его, с какой стратегией? Непонятно.", "Выложил в TikTok — аккаунт заблокировали. Потому что без прогрева это вопрос дней.", "Набрал подписчиков — человек написал «привет», ты промолчал. Он ушёл.", "Делаешь контент — но не знаешь что сейчас залетает. Часами ищешь идеи, половина не заходит."].map(t => (<div key={t} className="flex items-start gap-2.5"><span className="text-white/15 mt-0.5 flex-shrink-0">—</span><p className="text-white/45 text-sm leading-relaxed">{t}</p></div>))}</div></Reveal>
+        <Reveal><div className="space-y-2 mb-6">{["Сделал красивый контент — а куда его, с какой стратегией? Непонятно.", "Выложил в TikTok — аккаунт заблокировали. Потому что без прогрева это вопрос дней.", "Набрал подписчиков — человек написал «привет», ты промолчал. Он ушёл.", "Делаешь контент — но не знаешь что сейчас залетает. Часами ищешь идеи, половина не заходит."].map(t => (<div key={t} className="flex items-start gap-2.5"><span className="text-white/15 mt-0.5 flex-shrink-0">—</span><p className="text-white/45 fluid-sm">{t}</p></div>))}</div></Reveal>
         <Reveal><P>Это как уметь готовить — но открыть ресторан без меню, без официантов и без вывески.</P></Reveal>
         <Reveal><P accent>Умение создавать контент без системы продвижения и заработка = хобби.<br />С системой = бизнес.</P></Reveal>
         <MidCTA />
@@ -295,7 +295,7 @@ export default function Index() {
                 <div className="w-5 h-5 rounded flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: 'rgba(0,255,136,0.08)', border: '1px solid rgba(0,255,136,0.15)' }}>
                   <Icon name="Check" size={11} style={{ color: '#00ff88' } as React.CSSProperties} />
                 </div>
-                <div><span className="text-white/80 text-sm font-medium">{item.title}. </span><span className="text-white/40 text-sm leading-relaxed">{item.text}</span></div>
+                <div><span className="text-white/80 fluid-sm font-medium">{item.title}. </span><span className="text-white/40 fluid-sm">{item.text}</span></div>
               </div>
             </Reveal>
           ))}
@@ -307,11 +307,11 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             <div className="rounded-xl p-5" style={{ background: 'rgba(0,255,136,0.03)', border: '1px solid rgba(0,255,136,0.1)' }}>
               <div className="text-xs font-oswald tracking-widest uppercase mb-4" style={{ color: 'rgba(0,255,136,0.6)' }}>Подходит</div>
-              <div className="space-y-2.5">{["Есть 2–3 часа в день", "$50–70 на старт", "Готов разбираться 2–3 недели", "Хочешь доход без привязки к лицу и месту", "Не боишься нового"].map(t => (<div key={t} className="flex items-start gap-2"><Icon name="Check" size={13} className="flex-shrink-0 mt-0.5" style={{ color: '#00ff88' } as React.CSSProperties} /><span className="text-white/50 text-xs leading-relaxed">{t}</span></div>))}</div>
+              <div className="space-y-2.5">{["Есть 2–3 часа в день", "$50–70 на старт", "Готов разбираться 2–3 недели", "Хочешь доход без привязки к лицу и месту", "Не боишься нового"].map(t => (<div key={t} className="flex items-start gap-2"><Icon name="Check" size={13} className="flex-shrink-0 mt-0.5" style={{ color: '#00ff88' } as React.CSSProperties} /><span className="text-white/50 fluid-xs">{t}</span></div>))}</div>
             </div>
             <div className="rounded-xl p-5" style={{ background: 'rgba(255,50,50,0.02)', border: '1px solid rgba(255,50,50,0.06)' }}>
               <div className="text-xs font-oswald tracking-widest uppercase mb-4 text-red-400/50">Не подходит</div>
-              <div className="space-y-2.5">{["Ищешь «кнопку бабло»", "Нет 2 часов в день на первое время", "Не готов вкладывать $50 на старт", "Ждёшь гарантий конкретной суммы", "Хочешь результат без усилий"].map(t => (<div key={t} className="flex items-start gap-2"><span className="text-red-400/40 flex-shrink-0 mt-0.5 text-xs">✕</span><span className="text-white/35 text-xs leading-relaxed">{t}</span></div>))}</div>
+              <div className="space-y-2.5">{["Ищешь «кнопку бабло»", "Нет 2 часов в день на первое время", "Не готов вкладывать $50 на старт", "Ждёшь гарантий конкретной суммы", "Хочешь результат без усилий"].map(t => (<div key={t} className="flex items-start gap-2"><span className="text-red-400/40 flex-shrink-0 mt-0.5 text-xs">✕</span><span className="text-white/35 fluid-xs">{t}</span></div>))}</div>
             </div>
           </div>
         </Reveal>
@@ -321,15 +321,15 @@ export default function Index() {
         <Reveal>
           <div className="rounded-xl overflow-hidden mb-4" style={{ border: '1px solid rgba(255,255,255,0.05)' }}>
             <div className="text-xs font-oswald tracking-widest uppercase text-white/25 px-5 pt-4 pb-2">Запуск</div>
-            {[["VPN", "$5–10"], ["Облачный сервер для первого персонажа", "$15–20"], ["Регистрация на площадке", "$30–40"]].map(([l, v]) => (<div key={l} className="flex justify-between px-5 py-3" style={{ borderTop: '1px solid rgba(255,255,255,0.03)' }}><span className="text-white/45 text-sm">{l}</span><span className="text-white/75 text-sm font-oswald">{v}</span></div>))}
-            <div className="flex justify-between px-5 py-3 font-medium" style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.015)' }}><span className="text-white/65 text-sm">Итого</span><span className="text-white text-sm font-oswald">$50–70</span></div>
+            {[["VPN", "$5–10"], ["Облачный сервер для первого персонажа", "$15–20"], ["Регистрация на площадке", "$30–40"]].map(([l, v]) => (<div key={l} className="flex justify-between px-5 py-3" style={{ borderTop: '1px solid rgba(255,255,255,0.03)' }}><span className="text-white/45 fluid-sm">{l}</span><span className="text-white/75 fluid-sm font-oswald">{v}</span></div>))}
+            <div className="flex justify-between px-5 py-3 font-medium" style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.015)' }}><span className="text-white/65 fluid-sm">Итого</span><span className="text-white fluid-sm font-oswald">$50–70</span></div>
           </div>
         </Reveal>
         <Reveal>
           <div className="rounded-xl overflow-hidden mb-6" style={{ border: '1px solid rgba(255,255,255,0.05)' }}>
             <div className="text-xs font-oswald tracking-widest uppercase text-white/25 px-5 pt-4 pb-2">Ежемесячно</div>
-            {[["Сервер: пара часов — контент на месяц", "$3–5"], ["VPN", "$5–10"]].map(([l, v]) => (<div key={l} className="flex justify-between px-5 py-3" style={{ borderTop: '1px solid rgba(255,255,255,0.03)' }}><span className="text-white/45 text-sm">{l}</span><span className="text-white/75 text-sm font-oswald">{v}</span></div>))}
-            <div className="flex justify-between px-5 py-3 font-medium" style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.015)' }}><span className="text-white/65 text-sm">Итого в месяц</span><span className="text-white text-sm font-oswald">~$10–15</span></div>
+            {[["Сервер: пара часов — контент на месяц", "$3–5"], ["VPN", "$5–10"]].map(([l, v]) => (<div key={l} className="flex justify-between px-5 py-3" style={{ borderTop: '1px solid rgba(255,255,255,0.03)' }}><span className="text-white/45 fluid-sm">{l}</span><span className="text-white/75 fluid-sm font-oswald">{v}</span></div>))}
+            <div className="flex justify-between px-5 py-3 font-medium" style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.015)' }}><span className="text-white/65 fluid-sm">Итого в месяц</span><span className="text-white fluid-sm font-oswald">~$10–15</span></div>
           </div>
         </Reveal>
         <Reveal><P>Мой доход (реальный, со скринами):</P></Reveal>
@@ -339,7 +339,7 @@ export default function Index() {
               { l: "Месяц 1", v: "$40", note: "ошибки, баны, нулевая монетизация", glow: false },
               { l: "Месяц 2", v: "$927", note: "разобрался с прогревом и чаттингом", glow: false },
               { l: "Апрель, 8 дней", v: "$745", note: "рост продолжается", glow: true },
-            ].map((r, i) => (<div key={r.l} className="flex justify-between items-center px-5 py-3.5" style={{ borderTop: i ? '1px solid rgba(255,255,255,0.03)' : 'none' }}><div><span className="text-white/45 text-sm">{r.l}</span><span className="text-white/20 text-xs ml-2">— {r.note}</span></div><span className="text-sm font-oswald font-bold" style={r.glow ? { color: '#00ff88', textShadow: '0 0 10px rgba(0,255,136,0.4)' } : { color: 'white' }}>{r.v}</span></div>))}
+            ].map((r, i) => (<div key={r.l} className="flex justify-between items-center px-5 py-3.5" style={{ borderTop: i ? '1px solid rgba(255,255,255,0.03)' : 'none' }}><div><span className="text-white/45 fluid-sm">{r.l}</span><span className="text-white/20 fluid-xs ml-2">— {r.note}</span></div><span className="fluid-sm font-oswald font-bold" style={r.glow ? { color: '#00ff88', textShadow: '0 0 10px rgba(0,255,136,0.4)' } : { color: 'white' }}>{r.v}</span></div>))}
           </div>
         </Reveal>
         <Reveal><P accent>С $40 до $745 за 8 дней — рост в 18 раз за 2 месяца. Одна модель.</P></Reveal>
@@ -353,7 +353,7 @@ export default function Index() {
             </div>
             {[["Цена", "бесплатно", "30–50k ₽", "9 900 ₽"], ["Поддержка", "нет", "на время курса", "навсегда"], ["Обновления", "нет", "нет", "бесплатно"], ["Автоматизация", "нет", "нет", "да"], ["Шаблоны", "нет", "базовые", "все мои"], ["Скрипты общения", "нет", "нет", "готовые"], ["Сообщество", "нет", "чат курса", "закрытый клуб"], ["Время до результата", "месяцы", "месяц", "дни"]].map(([label, s, k, c], i) => (
               <div key={i} className="grid grid-cols-4 text-xs px-4 py-2.5" style={{ borderBottom: '1px solid rgba(255,255,255,0.025)' }}>
-                <div className="text-white/40">{label}</div><div className="text-white/25 text-center">{s}</div><div className="text-white/25 text-center">{k}</div><div className="text-center font-medium compare-highlight rounded" style={{ color: '#00ff88' }}>{c}</div>
+                <div className="text-white/40 fluid-xs">{label}</div><div className="text-white/25 text-center fluid-xs">{s}</div><div className="text-white/25 text-center fluid-xs">{k}</div><div className="text-center font-medium compare-highlight rounded fluid-xs" style={{ color: '#00ff88' }}>{c}</div>
               </div>
             ))}
           </div>
@@ -363,12 +363,12 @@ export default function Index() {
         <SectionTitle title="Честная часть" sub="Без обещаний — только факты" />
         <Reveal>
           <div className="space-y-3 mb-6">
-            {["Нет гарантий конкретного дохода. Кто обещает гарантии — врёт.", "Нет «нажми кнопку и получи деньги». Первые 2–3 недели нужно погрузиться и разобраться. Это честно.", "Нет волшебства. Это бизнес. Но бизнес с порогом входа $50–70, а не миллионы на франшизу."].map(t => (<div key={t} className="flex items-start gap-2.5"><span className="text-red-400/40 mt-0.5 flex-shrink-0 text-xs">✕</span><p className="text-white/40 text-sm leading-relaxed">{t}</p></div>))}
+            {["Нет гарантий конкретного дохода. Кто обещает гарантии — врёт.", "Нет «нажми кнопку и получи деньги». Первые 2–3 недели нужно погрузиться и разобраться. Это честно.", "Нет волшебства. Это бизнес. Но бизнес с порогом входа $50–70, а не миллионы на франшизу."].map(t => (<div key={t} className="flex items-start gap-2.5"><span className="text-red-400/40 mt-0.5 flex-shrink-0 text-xs">✕</span><p className="text-white/40 fluid-sm">{t}</p></div>))}
           </div>
         </Reveal>
         <Reveal>
           <div className="space-y-3 mb-6">
-            {["Есть: готовая система, проверенные инструменты и 35 человек рядом которые помогут когда застрянешь.", "Можно совмещать с работой. Нет дедлайнов. В своём темпе."].map(t => (<div key={t} className="flex items-start gap-2.5"><Icon name="Check" size={14} className="flex-shrink-0 mt-0.5" style={{ color: '#00ff88' } as React.CSSProperties} /><p className="text-white/55 text-sm leading-relaxed">{t}</p></div>))}
+            {["Есть: готовая система, проверенные инструменты и 35 человек рядом которые помогут когда застрянешь.", "Можно совмещать с работой. Нет дедлайнов. В своём темпе."].map(t => (<div key={t} className="flex items-start gap-2.5"><Icon name="Check" size={14} className="flex-shrink-0 mt-0.5" style={{ color: '#00ff88' } as React.CSSProperties} /><p className="text-white/55 fluid-sm">{t}</p></div>))}
           </div>
         </Reveal>
 
@@ -393,9 +393,9 @@ export default function Index() {
           <div className="neon-divider mb-12" />
           <Reveal>
             <div className="text-center mb-10">
-              <div className="font-oswald text-5xl md:text-6xl font-bold mb-2 gradient-text">9 900 ₽</div>
-              <div className="text-white/50 text-base mb-1">Один раз. Навсегда.</div>
-              <div className="text-white/25 text-sm leading-relaxed max-w-md mx-auto">Не подписка. Заплатил один раз — доступ ко всему навсегда. Все обновления, новые материалы, автоматизация — бесплатно.</div>
+              <div className="font-oswald font-bold mb-3 gradient-text" style={{ fontSize: 'clamp(3rem, 4vw + 1rem, 5rem)' }}>9 900 ₽</div>
+              <div className="text-white/50 fluid-body mb-1">Один раз. Навсегда.</div>
+              <div className="text-white/25 fluid-sm max-w-lg mx-auto">Не подписка. Заплатил один раз — доступ ко всему навсегда. Все обновления, новые материалы, автоматизация — бесплатно.</div>
             </div>
           </Reveal>
           <Reveal delay={100}>
@@ -410,28 +410,28 @@ export default function Index() {
             ) : (
               <form onSubmit={handleSubmit} className="rounded-xl p-6 space-y-4" style={{ border: '1px solid rgba(0,255,136,0.12)', background: 'rgba(0,255,136,0.02)' }}>
                 <div className="text-center mb-3">
-                  <div className="font-oswald text-base font-semibold tracking-wide mb-1">Напиши мне — расскажу подробнее</div>
-                  <div className="text-xs text-white/30">Отвечу на вопросы, помогу с оплатой</div>
+                  <div className="font-oswald fluid-body font-semibold tracking-wide mb-1">Напиши мне — расскажу подробнее</div>
+                  <div className="fluid-xs text-white/30">Отвечу на вопросы, помогу с оплатой</div>
                 </div>
                 <div>
-                  <input type="text" placeholder="Имя" value={name} onChange={(e) => setName(e.target.value)} required className="w-full rounded-lg px-4 py-3 text-white text-sm focus:outline-none transition-all" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }} onFocus={(e) => e.target.style.borderColor = 'rgba(0,255,136,0.3)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.06)'} />
+                  <input type="text" placeholder="Имя" value={name} onChange={(e) => setName(e.target.value)} required className="w-full rounded-lg px-4 py-3.5 text-white fluid-sm focus:outline-none transition-all" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }} onFocus={(e) => e.target.style.borderColor = 'rgba(0,255,136,0.3)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.06)'} />
                 </div>
                 <div>
-                  <input type="text" placeholder="@username в Telegram" value={tg} onChange={(e) => setTg(e.target.value)} required className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none transition-all" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', color: 'white' }} onFocus={(e) => e.target.style.borderColor = 'rgba(0,255,136,0.3)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.06)'} />
+                  <input type="text" placeholder="@username в Telegram" value={tg} onChange={(e) => setTg(e.target.value)} required className="w-full rounded-lg px-4 py-3.5 text-white fluid-sm focus:outline-none transition-all" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', color: 'white' }} onFocus={(e) => e.target.style.borderColor = 'rgba(0,255,136,0.3)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.06)'} />
                 </div>
-                <button type="submit" className="neon-btn w-full py-4 rounded-lg uppercase tracking-widest text-sm flex items-center justify-center gap-2"><Icon name="ArrowRight" size={16} /> Занять место в клубе</button>
+                <button type="submit" className="neon-btn w-full py-4 rounded-lg uppercase tracking-widest fluid-btn flex items-center justify-center gap-2"><Icon name="ArrowRight" size={16} /> Занять место в клубе</button>
               </form>
             )}
           </Reveal>
-          <p className="text-xs text-white/15 text-center mt-6 leading-relaxed max-w-sm mx-auto">Результаты в статье — мой личный опыт. Ваш результат зависит от вложенных усилий, времени и рыночных условий.</p>
+          <p className="fluid-xs text-white/15 text-center mt-8 max-w-md mx-auto">Результаты в статье — мой личный опыт. Ваш результат зависит от вложенных усилий, времени и рыночных условий.</p>
         </section>
 
       </div>
 
       <footer className="py-6 relative z-10" style={{ borderTop: '1px solid rgba(255,255,255,0.03)' }}>
         <div className="container mx-auto px-4 flex items-center justify-between">
-          <div className="font-oswald text-xs font-bold tracking-widest text-white/20">AI MODELS FACTORY</div>
-          <div className="text-xs text-white/10">© 2026</div>
+          <div className="font-oswald fluid-xs font-bold tracking-widest text-white/20">AI MODELS FACTORY</div>
+          <div className="fluid-xs text-white/10">© 2026</div>
         </div>
       </footer>
 
