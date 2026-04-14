@@ -26,52 +26,56 @@ export default function HeroSection() {
         <div className="hero-line absolute top-2/3 right-0 w-[200px]" style={{ background: 'linear-gradient(to left, transparent, rgba(168,85,247,0.2), transparent)' }} />
         <div className="absolute top-1/2 right-16 w-px h-32 hidden md:block" style={{ background: 'linear-gradient(to bottom, rgba(0,255,136,0.3), transparent)' }} />
 
-        <div className="container mx-auto px-4 relative z-10 py-20 md:py-32 lg:py-40">
+        <div className="container mx-auto px-4 relative z-10 py-16 md:py-32 lg:py-40">
           <div className="max-w-3xl">
             <Reveal>
-              <div className="metric-badge mb-8">
+              <div className="metric-badge mb-5 md:mb-8">
                 <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 Готовая система — 35 человек уже зарабатывают
               </div>
             </Reveal>
             <Reveal delay={100}>
-              <h1 className="font-oswald font-bold leading-[1.02] mb-8">
+              <h1 className="font-oswald font-bold leading-[1.05] mb-5 md:mb-8">
                 <span className="gradient-text fluid-hero">Запусти AI-инфлюенсера</span><br />
                 <span className="text-white fluid-hero-sub">который зарабатывает</span><br />
                 <span className="fluid-hero-sub" style={{ color: '#00ff88', textShadow: '0 0 30px rgba(0,255,136,0.3)' }}>без твоего лица и голоса.</span>
               </h1>
             </Reveal>
             <Reveal delay={250}>
-              <p className="text-white/55 fluid-body-lg max-w-2xl mb-6">
-                Нейросеть создаёт виртуального персонажа — лицо, которого не существует. Ты публикуешь его контент в TikTok и Instagram. Подписчики приходят, платят. Тебя никто не видит и не знает.
+              <p className="text-white/55 fluid-body max-w-2xl mb-5">
+                Нейросеть создаёт персонажа — лицо, которого не существует. Ты публикуешь его контент. Подписчики платят. Тебя никто не видит.
               </p>
             </Reveal>
             <Reveal delay={300}>
-              <div className="flex items-center gap-5 mb-6 flex-wrap">
+              <div className="flex items-center gap-3 mb-5 flex-wrap">
                 {[
                   { icon: "Monitor", label: "Только ноутбук" },
                   { icon: "Clock", label: "2–3 часа в день" },
                   { icon: "UserX", label: "Без своего лица" },
                 ].map(s => (
-                  <div key={s.label} className="flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                    <Icon name={s.icon} size={14} style={{ color: 'rgba(0,255,136,0.5)' } as React.CSSProperties} />
+                  <div key={s.label} className="flex items-center gap-2 rounded-full px-3 py-2" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
+                    <Icon name={s.icon} size={13} style={{ color: 'rgba(0,255,136,0.5)' } as React.CSSProperties} />
                     <span className="fluid-xs text-white/45">{s.label}</span>
                   </div>
                 ))}
               </div>
             </Reveal>
             <Reveal delay={350}>
-              <p className="text-white/25 fluid-xs max-w-lg mb-10">
-                Мой результат: $745 за 8 дней в апреле. Всего $1,875 за 3 месяца с одной модели. Ниже — как это работает и как начать.
+              <p className="text-white/25 fluid-xs max-w-lg mb-8">
+                Мой результат: $745 за 8 дней в апреле · $1,875 за 3 месяца · одна модель
               </p>
             </Reveal>
             <Reveal delay={450}>
-              <div className="flex flex-col sm:flex-row gap-3 mb-3">
-                <a href="#история" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Как это работает <Icon name="ChevronDown" size={16} /></a>
-                <a href={TG_LINK} target="_blank" rel="noopener noreferrer" className="neon-btn-outline fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Начать зарабатывать <Icon name="ArrowRight" size={15} /></a>
+              <div className="flex flex-col gap-3 sm:flex-row mb-3">
+                <a href="#история" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center w-full sm:w-auto">
+                  Как это работает <Icon name="ChevronDown" size={16} />
+                </a>
+                <a href={TG_LINK} target="_blank" rel="noopener noreferrer" className="neon-btn-outline fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center w-full sm:w-auto">
+                  Начать зарабатывать <Icon name="ArrowRight" size={15} />
+                </a>
               </div>
               <p className="fluid-xs text-white/20">
-                Кнопка «Начать зарабатывать» откроет диалог со мной в Telegram — там расскажу детали и помогу со вступлением
+                Кнопка «Начать зарабатывать» откроет мой диалог в Telegram
               </p>
             </Reveal>
           </div>

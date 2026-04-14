@@ -52,7 +52,7 @@ export default function StorySections() {
               { label: "Апрель, 8 дней", val: "$745", w: "100%", dim: false, glow: true },
             ].map(r => (
               <div key={r.label} className="flex items-center gap-3">
-                <div className="w-32 fluid-xs text-white/35 font-oswald tracking-wide text-right flex-shrink-0">{r.label}</div>
+                <div className="w-20 md:w-32 fluid-xs text-white/35 font-oswald tracking-wide text-right flex-shrink-0">{r.label}</div>
                 <div className="flex-1 h-2.5 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.04)' }}>
                   <div className="h-full rounded-full transition-all duration-1000" style={{ width: r.w, background: r.glow ? 'linear-gradient(90deg, #00ff88, #00e5ff)' : r.dim ? 'rgba(255,255,255,0.12)' : 'linear-gradient(90deg, #00ff88, #00e5ff)', opacity: r.dim ? 0.5 : 1, boxShadow: r.glow ? '0 0 15px rgba(0,255,136,0.5)' : 'none' }} />
                 </div>
@@ -277,12 +277,12 @@ export default function StorySections() {
         <Reveal>
           <div className="relative my-8 rounded-xl overflow-hidden" style={{ border: '1px solid rgba(0,255,136,0.15)' }}>
             {/* Скрин — видно ~60%, остальное размыто */}
-            <div className="relative" style={{ maxHeight: '380px', overflow: 'hidden' }}>
+            <div className="relative" style={{ height: 'clamp(260px, 45vw, 400px)', overflow: 'hidden' }}>
               <img
                 src="https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/63b2996a-8783-4ebb-9d2b-ad1ccd05865a.png"
                 alt="Структура клуба AI Models Factory"
                 className="w-full"
-                style={{ filter: 'blur(0px)', objectFit: 'cover', objectPosition: 'top' }}
+                style={{ objectFit: 'cover', objectPosition: 'top', height: '100%' }}
               />
               {/* Градиентное размытие снизу */}
               <div className="absolute inset-0" style={{

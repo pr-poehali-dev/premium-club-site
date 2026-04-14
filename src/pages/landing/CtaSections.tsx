@@ -87,7 +87,22 @@ export default function CtaSections() {
         {/* Comparison */}
         <Reveal>
           <h3 className="font-oswald fluid-sm font-bold tracking-wide uppercase text-white/40 mt-12 mb-4">Почему не курс за 50 000₽</h3>
-          <div className="rounded-xl overflow-hidden mb-6" style={{ border: '1px solid rgba(255,255,255,0.05)' }}>
+
+          {/* Mobile: карточки */}
+          <div className="md:hidden space-y-2 mb-6">
+            {[["Цена", "бесплатно", "30–50k ₽", "9 900 ₽"], ["Поддержка", "нет", "на время курса", "навсегда"], ["Обновления", "нет", "нет", "бесплатно"], ["Автоматизация", "нет", "нет", "да"], ["Шаблоны", "нет", "базовые", "все мои"], ["Скрипты общения", "нет", "нет", "готовые"], ["Срок до результата", "месяцы", "месяц", "дни"]].map(([label, s, k, c], i) => (
+              <div key={i} className="rounded-lg px-4 py-3 flex items-center justify-between gap-3" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.04)' }}>
+                <span className="fluid-xs text-white/40 flex-1 min-w-0">{label}</span>
+                <div className="flex items-center gap-3 flex-shrink-0">
+                  <span className="fluid-xs text-white/20 line-through">{k}</span>
+                  <span className="fluid-xs font-bold px-2 py-0.5 rounded" style={{ color: '#00ff88', background: 'rgba(0,255,136,0.08)', border: '1px solid rgba(0,255,136,0.12)' }}>{c}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: таблица */}
+          <div className="hidden md:block rounded-xl overflow-hidden mb-6" style={{ border: '1px solid rgba(255,255,255,0.05)' }}>
             <div className="grid grid-cols-4 fluid-xs font-oswald tracking-wider uppercase px-4 py-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)', background: 'rgba(255,255,255,0.015)' }}>
               <div className="text-white/25"></div>
               <div className="text-white/25 text-center">Сам</div>
