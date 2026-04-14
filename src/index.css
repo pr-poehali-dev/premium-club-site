@@ -493,6 +493,110 @@
   padding: clamp(1.5rem, 2vw + 0.5rem, 2.5rem);
 }
 
+/* ===== SECTION TRANSITIONS ===== */
+.section-bridge {
+  position: relative;
+  padding: clamp(2rem, 4vw, 5rem) 0;
+}
+.section-bridge::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 255, 136, 0.15) 30%,
+    rgba(0, 255, 136, 0.15) 70%,
+    transparent
+  );
+  transform: translateX(-50%);
+}
+.section-bridge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 255, 136, 0.3);
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.2);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== SCROLL INDICATOR ===== */
+@keyframes scroll-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.8;
+  }
+}
+.scroll-indicator {
+  animation: scroll-bounce 2.5s ease-in-out infinite;
+}
+
+/* ===== PULL QUOTE ===== */
+.pull-quote {
+  position: relative;
+  padding-left: clamp(1.2rem, 2vw, 2rem);
+  border-left: 2px solid rgba(0, 255, 136, 0.25);
+  font-style: italic;
+}
+
+/* ===== METRIC BADGE ===== */
+.metric-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  background: rgba(0, 255, 136, 0.06);
+  border: 1px solid rgba(0, 255, 136, 0.12);
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(0.7rem, 0.12vw + 0.65rem, 0.85rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(0, 255, 136, 0.7);
+}
+
+/* ===== STAT BLOCK ===== */
+.stat-block {
+  text-align: center;
+  padding: clamp(1.5rem, 2vw, 2.5rem);
+}
+.stat-number {
+  font-family: "Oswald", sans-serif;
+  color: var(--neon-green);
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  font-size: clamp(2rem, 3vw + 0.5rem, 3.5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+.stat-label {
+  font-size: clamp(0.7rem, 0.12vw + 0.65rem, 0.85rem);
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-family: "Oswald", sans-serif;
+}
+
+/* ===== FULL-WIDTH VISUAL BREAK ===== */
+.visual-break {
+  position: relative;
+  margin: clamp(2rem, 4vw, 5rem) calc(-1 * clamp(1rem, 3vw, 2rem));
+  padding: clamp(2rem, 3vw, 4rem) clamp(1rem, 3vw, 2rem);
+  background: rgba(255, 255, 255, 0.015);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .hero-gradient {
@@ -501,6 +605,12 @@
       rgba(0, 255, 136, 0.06) 0%,
       transparent 60%
     );
+  }
+  .visual-break {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
