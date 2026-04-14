@@ -85,7 +85,7 @@ export default function Index() {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="font-oswald fluid-xs font-bold tracking-widest">AI <G>MODELS</G> FACTORY</div>
           <a href={TG_LINK} target="_blank" rel="noopener noreferrer" className="neon-btn fluid-btn-sm rounded-md uppercase tracking-widest flex items-center gap-1.5">
-            <Icon name="Send" size={12} /> Написать
+            Вступить в клуб
           </a>
         </div>
       </nav>
@@ -142,10 +142,13 @@ export default function Index() {
               </p>
             </Reveal>
             <Reveal delay={450}>
-              <div className="flex flex-col sm:flex-row gap-3 mb-8">
-                <a href="#история" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Узнать как это работает <Icon name="ChevronDown" size={16} /></a>
-                <a href={TG_LINK} target="_blank" rel="noopener noreferrer" className="neon-btn-outline fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center"><Icon name="Send" size={15} /> Написать в Telegram</a>
+              <div className="flex flex-col sm:flex-row gap-3 mb-3">
+                <a href="#история" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Как это работает <Icon name="ChevronDown" size={16} /></a>
+                <a href={TG_LINK} target="_blank" rel="noopener noreferrer" className="neon-btn-outline fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Начать зарабатывать <Icon name="ArrowRight" size={15} /></a>
               </div>
+              <p className="fluid-xs text-white/20">
+                Кнопка «Начать зарабатывать» откроет диалог со мной в Telegram — там расскажу детали и помогу со вступлением
+              </p>
             </Reveal>
           </div>
         </div>
@@ -313,9 +316,12 @@ export default function Index() {
                 <span>Сейчас в клубе <strong className="text-white/60">35 из 50</strong> мест</span>
               </div>
               <a href={TG_LINK} target="_blank" rel="noopener noreferrer" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest">
-                <Icon name="Send" size={16} /> Написать и узнать подробности
+                Занять место в клубе <Icon name="ArrowRight" size={16} />
               </a>
-              <div className="fluid-xs text-white/20 mt-3">После 50 участников цена — 14 900 ₽</div>
+              <div className="fluid-xs text-white/20 mt-3">
+                Откроется мой Telegram — там всё обсудим и оформим вступление
+              </div>
+              <div className="fluid-xs text-white/15 mt-1">После 50 участников цена — 14 900 ₽</div>
             </div>
           </div>
         </Reveal>
@@ -584,8 +590,8 @@ export default function Index() {
                   <Icon name="Send" size={28} style={{ color: '#000' } as React.CSSProperties} />
                   <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-green-400 border-2 border-background animate-pulse" />
                 </div>
-                <div className="font-oswald fluid-body font-bold mb-1">Написать напрямую</div>
-                <p className="fluid-xs text-white/35">Отвечу на вопросы, расскажу детали и помогу начать</p>
+                <div className="font-oswald fluid-body font-bold mb-2">Вступить в клуб — 9 900 ₽</div>
+                <p className="fluid-xs text-white/35 max-w-xs mx-auto">Нажми кнопку ниже — откроется мой личный диалог в Telegram. Там обсудим детали и оформим вступление</p>
               </div>
 
               {/* TG button */}
@@ -596,9 +602,11 @@ export default function Index() {
                   rel="noopener noreferrer"
                   className="neon-btn w-full py-4 rounded-xl uppercase tracking-widest fluid-btn flex items-center justify-center gap-3 pulse-neon"
                 >
-                  <Icon name="Send" size={18} />
-                  Открыть диалог в Telegram
+                  Начать зарабатывать <Icon name="ArrowRight" size={18} />
                 </a>
+                <p className="fluid-xs text-white/20 text-center">
+                  ↑ Откроет Telegram — это мой личный чат, отвечаю сам
+                </p>
 
                 {/* Trust row */}
                 <div className="flex items-center justify-center gap-5 flex-wrap pt-1">
