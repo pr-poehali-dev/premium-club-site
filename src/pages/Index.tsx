@@ -127,15 +127,15 @@ export default function Index() {
               </p>
             </Reveal>
             <Reveal delay={300}>
-              <div className="flex items-center gap-6 mb-6 flex-wrap">
+              <div className="flex items-center gap-5 mb-6 flex-wrap">
                 {[
-                  { val: "$50", label: "на старт" },
-                  { val: "2–3 ч", label: "в день" },
-                  { val: "0", label: "опыта" },
+                  { icon: "Monitor", label: "Только ноутбук" },
+                  { icon: "Clock", label: "2–3 часа в день" },
+                  { icon: "UserX", label: "Без своего лица" },
                 ].map(s => (
-                  <div key={s.label} className="flex items-center gap-2">
-                    <span className="font-oswald font-bold text-white" style={{ fontSize: 'clamp(1.1rem, 0.3vw + 0.9rem, 1.4rem)' }}>{s.val}</span>
-                    <span className="fluid-xs text-white/30">{s.label}</span>
+                  <div key={s.label} className="flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
+                    <Icon name={s.icon} size={14} style={{ color: 'rgba(0,255,136,0.5)' } as React.CSSProperties} />
+                    <span className="fluid-xs text-white/45">{s.label}</span>
                   </div>
                 ))}
               </div>
@@ -167,27 +167,6 @@ export default function Index() {
       </section>
 
 
-      {/* ===== STATS BAR — transition from hero ===== */}
-      <Reveal>
-        <div className="visual-break" style={{ background: 'rgba(0,255,136,0.015)' }}>
-          <div className="content-width">
-            <div className="grid grid-cols-3 gap-4">
-              <div className="stat-block">
-                <div className="stat-number">$50</div>
-                <div className="stat-label">Старт</div>
-              </div>
-              <div className="stat-block">
-                <div className="stat-number">4</div>
-                <div className="stat-label">Шага до дохода</div>
-              </div>
-              <div className="stat-block">
-                <div className="stat-number">35</div>
-                <div className="stat-label">Уже в клубе</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Reveal>
 
 
       <div className="content-width relative z-10">
@@ -195,9 +174,9 @@ export default function Index() {
         {/* ===== 1. ЦИФРЫ ===== */}
         <section id="история" className="section-spacing section-glow-green">
           <Reveal>
-            <div className="metric-badge mb-6">Реальный кейс</div>
+            <div className="metric-badge mb-6">Мой результат — твоя возможность</div>
             <h2 className="font-oswald fluid-h2 font-bold mb-3">Сколько приносит одна AI-модель</h2>
-            <p className="text-white/30 fluid-sm mb-8">Результат одного участника клуба. Одна модель, работает один.</p>
+            <p className="text-white/30 fluid-sm mb-8">Мой реальный доход за 3 месяца. Одна модель, работаю один. Всё что я использую — есть в клубе.</p>
           </Reveal>
 
           <Reveal><P>Апрель 2026, первые 8 дней.</P></Reveal>
@@ -333,10 +312,14 @@ export default function Index() {
           <div className="my-12 text-center py-8 rounded-xl relative overflow-hidden" style={{ background: 'rgba(0,255,136,0.03)', border: '1px solid rgba(0,255,136,0.1)' }}>
             <div className="shimmer absolute inset-0 pointer-events-none" />
             <div className="relative z-10">
+              <div className="fluid-xs text-white/30 mb-4 flex items-center justify-center gap-2">
+                <Icon name="Users" size={14} style={{ color: 'rgba(0,255,136,0.5)' } as React.CSSProperties} />
+                <span>Сейчас в клубе <strong className="text-white/60">35 из 50</strong> мест</span>
+              </div>
               <a href="#записаться" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest">
                 <Icon name="ArrowRight" size={16} /> Начать зарабатывать — 9 900 ₽
               </a>
-              <div className="fluid-xs text-white/20 mt-3">Один раз. Навсегда. Все обновления бесплатно.</div>
+              <div className="fluid-xs text-white/20 mt-3">После 50 участников цена — 14 900 ₽</div>
             </div>
           </div>
         </Reveal>
@@ -476,11 +459,11 @@ export default function Index() {
             <div className="grid md:grid-cols-2 gap-4 mb-6">
               <div className="rounded-xl card-padding-lg" style={{ background: 'rgba(0,255,136,0.03)', border: '1px solid rgba(0,255,136,0.1)' }}>
                 <div className="fluid-xs font-oswald tracking-widest uppercase mb-4" style={{ color: 'rgba(0,255,136,0.6)' }}>Подходит</div>
-                <div className="space-y-2.5">{["Есть 2–3 часа в день", "$50–70 на старт", "Готов разбираться 2–3 недели", "Хочешь доход без привязки к лицу и месту", "Не боишься нового"].map(t => (<div key={t} className="flex items-start gap-2"><Icon name="Check" size={13} className="flex-shrink-0 mt-0.5" style={{ color: '#00ff88' } as React.CSSProperties} /><span className="text-white/50 fluid-xs">{t}</span></div>))}</div>
+                <div className="space-y-2.5">{["Есть 2–3 часа в день", "$50–70 на запуск модели", "Готов разбираться 2–3 недели", "Хочешь доход без привязки к лицу и месту", "Не боишься нового"].map(t => (<div key={t} className="flex items-start gap-2"><Icon name="Check" size={13} className="flex-shrink-0 mt-0.5" style={{ color: '#00ff88' } as React.CSSProperties} /><span className="text-white/50 fluid-xs">{t}</span></div>))}</div>
               </div>
               <div className="rounded-xl card-padding-lg" style={{ background: 'rgba(255,50,50,0.02)', border: '1px solid rgba(255,50,50,0.06)' }}>
                 <div className="fluid-xs font-oswald tracking-widest uppercase mb-4 text-red-400/50">Не подходит</div>
-                <div className="space-y-2.5">{["Ищешь «кнопку бабло»", "Нет 2 часов в день", "Не готов вкладывать $50", "Ждёшь гарантий конкретной суммы", "Хочешь результат без усилий"].map(t => (<div key={t} className="flex items-start gap-2"><span className="text-red-400/40 flex-shrink-0 mt-0.5 text-xs">✕</span><span className="text-white/35 fluid-xs">{t}</span></div>))}</div>
+                <div className="space-y-2.5">{["Ищешь «кнопку бабло»", "Нет 2 часов в день", "Не готов вкладывать в запуск", "Ждёшь гарантий конкретной суммы", "Хочешь результат без усилий"].map(t => (<div key={t} className="flex items-start gap-2"><span className="text-red-400/40 flex-shrink-0 mt-0.5 text-xs">✕</span><span className="text-white/35 fluid-xs">{t}</span></div>))}</div>
               </div>
             </div>
           </Reveal>
@@ -571,9 +554,27 @@ export default function Index() {
         {/* ===== 12. ФИНАЛЬНЫЙ CTA ===== */}
         <section id="записаться" className="py-16 md:py-24 section-glow-green">
           <div className="neon-divider mb-12" />
+
+          {/* Urgency block */}
+          <Reveal>
+            <div className="rounded-xl card-padding mb-8 text-center" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)' }}>
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Icon name="Users" size={18} style={{ color: '#00ff88' } as React.CSSProperties} />
+                <span className="font-oswald fluid-sm tracking-wide text-white/60">Занято <strong className="text-white">35</strong> из <strong className="text-white">50</strong> мест</span>
+              </div>
+              <div className="w-full h-2 rounded-full overflow-hidden mb-3" style={{ background: 'rgba(255,255,255,0.06)' }}>
+                <div className="h-full rounded-full" style={{ width: '70%', background: 'linear-gradient(90deg, #00ff88, #00e5ff)', boxShadow: '0 0 12px rgba(0,255,136,0.4)' }} />
+              </div>
+              <p className="fluid-xs text-white/25">После 50 участников цена вырастет до <strong className="text-white/50">14 900 ₽</strong></p>
+            </div>
+          </Reveal>
+
           <Reveal>
             <div className="text-center mb-10">
-              <div className="font-oswald font-bold mb-3 gradient-text" style={{ fontSize: 'clamp(3rem, 4vw + 1rem, 5rem)' }}>9 900 ₽</div>
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <span className="font-oswald text-white/25 fluid-sm line-through">14 900 ₽</span>
+                <span className="font-oswald font-bold gradient-text" style={{ fontSize: 'clamp(3rem, 4vw + 1rem, 5rem)' }}>9 900 ₽</span>
+              </div>
               <div className="text-white/50 fluid-body mb-1">Один раз. Навсегда.</div>
               <div className="text-white/25 fluid-sm max-w-lg mx-auto">Заплатил один раз — получил всё. Обновления, новые инструменты, поддержка — навсегда.</div>
             </div>
@@ -600,7 +601,19 @@ export default function Index() {
                 <div>
                   <input type="text" placeholder="@username в Telegram" value={tg} onChange={(e) => setTg(e.target.value)} required className="w-full rounded-lg px-4 py-3.5 fluid-sm focus:outline-none transition-all" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', color: 'white' }} onFocus={(e) => e.target.style.borderColor = 'rgba(0,255,136,0.3)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.06)'} />
                 </div>
-                <button type="submit" className="neon-btn w-full py-4 rounded-lg uppercase tracking-widest fluid-btn flex items-center justify-center gap-2"><Icon name="ArrowRight" size={16} /> Начать зарабатывать</button>
+                <button type="submit" className="neon-btn w-full py-4 rounded-lg uppercase tracking-widest fluid-btn flex items-center justify-center gap-2 pulse-neon"><Icon name="ArrowRight" size={16} /> Начать зарабатывать</button>
+                <div className="flex items-center justify-center gap-4 pt-2">
+                  {[
+                    { icon: "Shield", text: "Доступ навсегда" },
+                    { icon: "RefreshCw", text: "Бесплатные обновления" },
+                    { icon: "MessageCircle", text: "Личная поддержка" },
+                  ].map(g => (
+                    <div key={g.text} className="flex items-center gap-1.5">
+                      <Icon name={g.icon} size={12} style={{ color: 'rgba(0,255,136,0.4)' } as React.CSSProperties} />
+                      <span className="fluid-xs text-white/25">{g.text}</span>
+                    </div>
+                  ))}
+                </div>
               </form>
             )}
           </Reveal>
