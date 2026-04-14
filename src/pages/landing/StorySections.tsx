@@ -273,9 +273,46 @@ export default function StorySections() {
           <p className="text-white/30 fluid-sm mb-8">Не курс с видео. Закрытый клуб с системой, шаблонами и поддержкой. Зашёл — делаешь.</p>
         </Reveal>
 
-        <Screenshot id="club-telegram" label="Структура клуба в Telegram" sublabel="Разделы: старт, прогрев, контент, монетизация, автоматизация" />
-
-        <Reveal><div className="fluid-xs font-oswald tracking-[0.15em] uppercase text-white/25 mb-8">35 человек — от программистов до бухгалтеров, от Москвы до Берлина.</div></Reveal>
+        {/* Locked preview */}
+        <Reveal>
+          <div className="relative my-8 rounded-xl overflow-hidden" style={{ border: '1px solid rgba(0,255,136,0.15)' }}>
+            {/* Скрин — видно ~60%, остальное размыто */}
+            <div className="relative" style={{ maxHeight: '380px', overflow: 'hidden' }}>
+              <img
+                src="https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/63b2996a-8783-4ebb-9d2b-ad1ccd05865a.png"
+                alt="Структура клуба AI Models Factory"
+                className="w-full"
+                style={{ filter: 'blur(0px)', objectFit: 'cover', objectPosition: 'top' }}
+              />
+              {/* Градиентное размытие снизу */}
+              <div className="absolute inset-0" style={{
+                background: 'linear-gradient(to bottom, transparent 35%, rgba(10,10,10,0.6) 60%, rgba(10,10,10,0.97) 85%, #0a0a0a 100%)'
+              }} />
+              {/* Lock-контент поверх размытия */}
+              <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center pb-8 px-6">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3" style={{ background: 'rgba(0,255,136,0.08)', border: '1px solid rgba(0,255,136,0.2)' }}>
+                  <Icon name="Lock" size={20} style={{ color: '#00ff88' } as React.CSSProperties} />
+                </div>
+                <p className="fluid-xs text-white/40 text-center mb-4 max-w-xs">
+                  14 закрытых разделов · видео-инструкции · шаблоны · скрипты · автоматизация
+                </p>
+                <a
+                  href={TG_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="neon-btn fluid-btn-sm rounded-lg inline-flex items-center gap-2 uppercase tracking-widest"
+                >
+                  <Icon name="Unlock" size={14} /> Получить доступ
+                </a>
+              </div>
+            </div>
+            {/* Подпись */}
+            <div className="px-4 py-3" style={{ background: 'rgba(0,0,0,0.5)', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+              <div className="fluid-xs font-oswald tracking-wider uppercase text-white/45">AI Models Factory — закрытый клуб в Telegram</div>
+              <div className="fluid-xs text-white/20 mt-0.5">35 участников · от программистов до бухгалтеров · Москва, Берлин, весь мир</div>
+            </div>
+          </div>
+        </Reveal>
 
         <div className="space-y-3 mb-6">
           {[
