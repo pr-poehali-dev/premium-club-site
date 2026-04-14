@@ -62,6 +62,8 @@ const P = ({ children, accent }: { children: React.ReactNode; accent?: boolean }
 const G = ({ children }: { children: React.ReactNode }) => <span style={{ color: '#00ff88' }}>{children}</span>;
 const W = ({ children }: { children: React.ReactNode }) => <span className="text-white font-semibold">{children}</span>;
 
+const TG_LINK = "https://t.me/m/eyoLAGiRODcy";
+
 const FAQItem = ({ q, a, open, onClick }: { q: string; a: string; open: boolean; onClick: () => void }) => (
   <div className={`faq-item mb-2 ${open ? 'open' : ''}`}>
     <button onClick={onClick} className="w-full flex items-center justify-between px-5 py-4 text-left">
@@ -73,15 +75,7 @@ const FAQItem = ({ q, a, open, onClick }: { q: string; a: string; open: boolean;
 );
 
 export default function Index() {
-  const [name, setName] = useState("");
-  const [tg, setTg] = useState("");
-  const [sent, setSent] = useState(false);
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (name && tg) setSent(true);
-  };
 
   return (
     <div className="min-h-screen bg-background text-foreground font-golos overflow-x-hidden noise-overlay">
@@ -90,7 +84,9 @@ export default function Index() {
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5" style={{ background: 'rgba(10,10,10,0.85)', backdropFilter: 'blur(20px)' }}>
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="font-oswald fluid-xs font-bold tracking-widest">AI <G>MODELS</G> FACTORY</div>
-          <a href="#записаться" className="neon-btn fluid-btn-sm rounded-md uppercase tracking-widest">Записаться</a>
+          <a href={TG_LINK} target="_blank" rel="noopener noreferrer" className="neon-btn fluid-btn-sm rounded-md uppercase tracking-widest flex items-center gap-1.5">
+            <Icon name="Send" size={12} /> Написать
+          </a>
         </div>
       </nav>
 
@@ -148,7 +144,7 @@ export default function Index() {
             <Reveal delay={450}>
               <div className="flex flex-col sm:flex-row gap-3 mb-8">
                 <a href="#история" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Узнать как это работает <Icon name="ChevronDown" size={16} /></a>
-                <a href="#записаться" className="neon-btn-outline fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Хочу начать <Icon name="ArrowRight" size={16} /></a>
+                <a href={TG_LINK} target="_blank" rel="noopener noreferrer" className="neon-btn-outline fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center"><Icon name="Send" size={15} /> Написать в Telegram</a>
               </div>
             </Reveal>
           </div>
@@ -316,8 +312,8 @@ export default function Index() {
                 <Icon name="Users" size={14} style={{ color: 'rgba(0,255,136,0.5)' } as React.CSSProperties} />
                 <span>Сейчас в клубе <strong className="text-white/60">35 из 50</strong> мест</span>
               </div>
-              <a href="#записаться" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest">
-                <Icon name="ArrowRight" size={16} /> Начать зарабатывать — 9 900 ₽
+              <a href={TG_LINK} target="_blank" rel="noopener noreferrer" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest">
+                <Icon name="Send" size={16} /> Написать и узнать подробности
               </a>
               <div className="fluid-xs text-white/20 mt-3">После 50 участников цена — 14 900 ₽</div>
             </div>
@@ -581,41 +577,68 @@ export default function Index() {
           </Reveal>
 
           <Reveal delay={100}>
-            {sent ? (
-              <div className="rounded-xl p-10 text-center" style={{ border: '1px solid rgba(0,255,136,0.25)', background: 'rgba(0,255,136,0.03)' }}>
-                <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5" style={{ border: '1px solid rgba(0,255,136,0.25)', background: 'rgba(0,255,136,0.06)' }}>
-                  <Icon name="CheckCircle" size={28} style={{ color: '#00ff88' } as React.CSSProperties} />
+            <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid rgba(0,255,136,0.15)', background: 'rgba(0,255,136,0.02)' }}>
+              {/* Header */}
+              <div className="px-6 pt-7 pb-5 text-center" style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 relative" style={{ background: 'linear-gradient(135deg, #00ff88 0%, #00e5ff 100%)', boxShadow: '0 0 30px rgba(0,255,136,0.3)' }}>
+                  <Icon name="Send" size={28} style={{ color: '#000' } as React.CSSProperties} />
+                  <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-green-400 border-2 border-background animate-pulse" />
                 </div>
-                <h3 className="font-oswald text-xl font-bold mb-2" style={{ color: '#00ff88' }}>ЗАЯВКА ПРИНЯТА</h3>
-                <p className="text-white/40 fluid-sm">Напишу в Telegram в ближайшее время.</p>
+                <div className="font-oswald fluid-body font-bold mb-1">Написать напрямую</div>
+                <p className="fluid-xs text-white/35">Отвечу на вопросы, расскажу детали и помогу начать</p>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="rounded-xl card-padding-lg space-y-4" style={{ border: '1px solid rgba(0,255,136,0.12)', background: 'rgba(0,255,136,0.02)' }}>
-                <div className="text-center mb-3">
-                  <div className="font-oswald fluid-body font-semibold tracking-wide mb-1">Оставь контакт — расскажу подробности</div>
-                  <div className="fluid-xs text-white/30">Отвечу на любые вопросы и помогу начать</div>
-                </div>
-                <div>
-                  <input type="text" placeholder="Имя" value={name} onChange={(e) => setName(e.target.value)} required className="w-full rounded-lg px-4 py-3.5 text-white fluid-sm focus:outline-none transition-all" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }} onFocus={(e) => e.target.style.borderColor = 'rgba(0,255,136,0.3)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.06)'} />
-                </div>
-                <div>
-                  <input type="text" placeholder="@username в Telegram" value={tg} onChange={(e) => setTg(e.target.value)} required className="w-full rounded-lg px-4 py-3.5 fluid-sm focus:outline-none transition-all" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', color: 'white' }} onFocus={(e) => e.target.style.borderColor = 'rgba(0,255,136,0.3)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.06)'} />
-                </div>
-                <button type="submit" className="neon-btn w-full py-4 rounded-lg uppercase tracking-widest fluid-btn flex items-center justify-center gap-2 pulse-neon"><Icon name="ArrowRight" size={16} /> Начать зарабатывать</button>
-                <div className="flex items-center justify-center gap-4 pt-2">
+
+              {/* TG button */}
+              <div className="p-6 space-y-4">
+                <a
+                  href={TG_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="neon-btn w-full py-4 rounded-xl uppercase tracking-widest fluid-btn flex items-center justify-center gap-3 pulse-neon"
+                >
+                  <Icon name="Send" size={18} />
+                  Открыть диалог в Telegram
+                </a>
+
+                {/* Trust row */}
+                <div className="flex items-center justify-center gap-5 flex-wrap pt-1">
                   {[
+                    { icon: "Zap", text: "Отвечаю быстро" },
                     { icon: "Shield", text: "Доступ навсегда" },
-                    { icon: "RefreshCw", text: "Бесплатные обновления" },
-                    { icon: "MessageCircle", text: "Личная поддержка" },
+                    { icon: "RefreshCw", text: "Обновления бесплатно" },
                   ].map(g => (
                     <div key={g.text} className="flex items-center gap-1.5">
-                      <Icon name={g.icon} size={12} style={{ color: 'rgba(0,255,136,0.4)' } as React.CSSProperties} />
+                      <Icon name={g.icon} size={12} style={{ color: 'rgba(0,255,136,0.45)' } as React.CSSProperties} />
                       <span className="fluid-xs text-white/25">{g.text}</span>
                     </div>
                   ))}
                 </div>
-              </form>
-            )}
+              </div>
+
+              {/* Chat preview */}
+              <div className="px-6 pb-6">
+                <div className="rounded-xl p-4 space-y-3" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.04)' }}>
+                  <div className="fluid-xs text-white/20 font-oswald tracking-widest uppercase mb-3">Пример диалога</div>
+                  {[
+                    { from: false, text: "Привет! Хочу узнать про клуб", time: "10:14" },
+                    { from: true, text: "Привет! Расскажи немного о себе — есть опыт с соцсетями? Сколько времени готов уделять?", time: "10:15" },
+                    { from: false, text: "Нет опыта, могу 2-3 часа в день", time: "10:16" },
+                    { from: true, text: "Отлично — как раз под это заточена система. Первые результаты обычно через 3–4 недели 🎯", time: "10:17" },
+                  ].map((m, i) => (
+                    <div key={i} className={`flex ${m.from ? 'justify-start' : 'justify-end'}`}>
+                      <div className="max-w-[80%] rounded-2xl px-3.5 py-2.5" style={{
+                        background: m.from ? 'rgba(0,255,136,0.08)' : 'rgba(255,255,255,0.06)',
+                        borderRadius: m.from ? '4px 16px 16px 16px' : '16px 4px 16px 16px',
+                        border: m.from ? '1px solid rgba(0,255,136,0.1)' : '1px solid rgba(255,255,255,0.05)'
+                      }}>
+                        <p className="fluid-xs leading-relaxed" style={{ color: m.from ? 'rgba(255,255,255,0.65)' : 'rgba(255,255,255,0.5)' }}>{m.text}</p>
+                        <span className="fluid-xs block mt-1 text-right" style={{ color: 'rgba(255,255,255,0.2)', fontSize: '10px' }}>{m.time}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </Reveal>
           <p className="fluid-xs text-white/15 text-center mt-8 max-w-md mx-auto">Результаты — мой личный опыт. Ваш результат зависит от вложенных усилий, времени и рыночных условий.</p>
         </section>
