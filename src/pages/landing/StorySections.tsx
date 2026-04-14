@@ -16,7 +16,20 @@ export default function StorySections() {
         <Screenshot id="april-income" label="Доход за апрель — $745 за 8 дней" sublabel="Скриншот дашборда с реальными выплатами" />
 
         <Reveal><P>Два месяца назад было $927 за полтора месяца. Сейчас столько набегает за полторы недели. <W>Рост в 18 раз</W> с первого месяца.</P></Reveal>
-        <Screenshot id="february-income" label="Доход за февраль-март — $927" sublabel="Полтора месяца работы, одна модель" />
+
+        <Reveal>
+          <div className="screenshot-frame my-8">
+            <img
+              src="https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/374f4bcf-3aeb-405b-aa2b-491cb07931d9.png"
+              alt="Fanvue dashboard — $927.83 с февраля 2026"
+              className="w-full"
+            />
+            <div className="px-4 py-3" style={{ background: 'rgba(0,0,0,0.5)', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+              <div className="fluid-xs font-oswald tracking-wider uppercase text-white/45">Fanvue — доход с февраля 2026</div>
+              <div className="fluid-xs text-white/20 mt-0.5">$927.83 за полтора месяца · одна AI-модель</div>
+            </div>
+          </div>
+        </Reveal>
 
         <Reveal>
           <div className="my-8 flex flex-col gap-3">
