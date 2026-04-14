@@ -595,7 +595,7 @@ export default function Index() {
               </div>
 
               {/* TG button */}
-              <div className="p-6 space-y-4">
+              <div className="p-6">
                 <a
                   href={TG_LINK}
                   target="_blank"
@@ -604,47 +604,6 @@ export default function Index() {
                 >
                   Начать зарабатывать <Icon name="ArrowRight" size={18} />
                 </a>
-                <p className="fluid-xs text-white/20 text-center">
-                  ↑ Откроет Telegram — это мой личный чат, отвечаю сам
-                </p>
-
-                {/* Trust row */}
-                <div className="flex items-center justify-center gap-5 flex-wrap pt-1">
-                  {[
-                    { icon: "Zap", text: "Отвечаю быстро" },
-                    { icon: "Shield", text: "Доступ навсегда" },
-                    { icon: "RefreshCw", text: "Обновления бесплатно" },
-                  ].map(g => (
-                    <div key={g.text} className="flex items-center gap-1.5">
-                      <Icon name={g.icon} size={12} style={{ color: 'rgba(0,255,136,0.45)' } as React.CSSProperties} />
-                      <span className="fluid-xs text-white/25">{g.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Chat preview */}
-              <div className="px-6 pb-6">
-                <div className="rounded-xl p-4 space-y-3" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.04)' }}>
-                  <div className="fluid-xs text-white/20 font-oswald tracking-widest uppercase mb-3">Пример диалога</div>
-                  {[
-                    { from: false, text: "Привет! Хочу узнать про клуб", time: "10:14" },
-                    { from: true, text: "Привет! Расскажи немного о себе — есть опыт с соцсетями? Сколько времени готов уделять?", time: "10:15" },
-                    { from: false, text: "Нет опыта, могу 2-3 часа в день", time: "10:16" },
-                    { from: true, text: "Отлично — как раз под это заточена система. Первые результаты обычно через 3–4 недели 🎯", time: "10:17" },
-                  ].map((m, i) => (
-                    <div key={i} className={`flex ${m.from ? 'justify-start' : 'justify-end'}`}>
-                      <div className="max-w-[80%] rounded-2xl px-3.5 py-2.5" style={{
-                        background: m.from ? 'rgba(0,255,136,0.08)' : 'rgba(255,255,255,0.06)',
-                        borderRadius: m.from ? '4px 16px 16px 16px' : '16px 4px 16px 16px',
-                        border: m.from ? '1px solid rgba(0,255,136,0.1)' : '1px solid rgba(255,255,255,0.05)'
-                      }}>
-                        <p className="fluid-xs leading-relaxed" style={{ color: m.from ? 'rgba(255,255,255,0.65)' : 'rgba(255,255,255,0.5)' }}>{m.text}</p>
-                        <span className="fluid-xs block mt-1 text-right" style={{ color: 'rgba(255,255,255,0.2)', fontSize: '10px' }}>{m.time}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </Reveal>
