@@ -111,30 +111,44 @@ export default function Index() {
             <Reveal>
               <div className="metric-badge mb-8">
                 <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                Реальный кейс с цифрами и скринами
+                Готовая система — 35 человек уже зарабатывают
               </div>
             </Reveal>
             <Reveal delay={100}>
               <h1 className="font-oswald font-bold leading-[1.02] mb-8">
-                <span className="gradient-text fluid-hero">Нейросеть создаёт человека.</span><br />
-                <span className="text-white fluid-hero-sub">Этот человек зарабатывает</span><br />
-                <span className="fluid-hero-sub" style={{ color: '#00ff88', textShadow: '0 0 30px rgba(0,255,136,0.3)' }}>$745 за 8 дней.</span>
+                <span className="gradient-text fluid-hero">Запусти AI-инфлюенсера</span><br />
+                <span className="text-white fluid-hero-sub">который зарабатывает</span><br />
+                <span className="fluid-hero-sub" style={{ color: '#00ff88', textShadow: '0 0 30px rgba(0,255,136,0.3)' }}>без твоего лица и голоса.</span>
               </h1>
             </Reveal>
             <Reveal delay={250}>
               <p className="text-white/55 fluid-body-lg max-w-2xl mb-6">
-                Я создал виртуального инфлюенсера с помощью AI — персонажа, которого не существует — и он приносит мне деньги каждый день. Без моего лица, голоса и присутствия.
+                Нейросеть создаёт виртуального персонажа — лицо, которого не существует. Ты публикуешь его контент в TikTok и Instagram. Подписчики приходят, платят. Тебя никто не видит и не знает.
               </p>
             </Reveal>
+            <Reveal delay={300}>
+              <div className="flex items-center gap-6 mb-6 flex-wrap">
+                {[
+                  { val: "$50", label: "на старт" },
+                  { val: "2–3 ч", label: "в день" },
+                  { val: "0", label: "опыта" },
+                ].map(s => (
+                  <div key={s.label} className="flex items-center gap-2">
+                    <span className="font-oswald font-bold text-white" style={{ fontSize: 'clamp(1.1rem, 0.3vw + 0.9rem, 1.4rem)' }}>{s.val}</span>
+                    <span className="fluid-xs text-white/30">{s.label}</span>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
             <Reveal delay={350}>
-              <p className="text-white/30 fluid-sm max-w-xl mb-12">
-                Ноутбук, $50 на старт, 2–3 часа в день. Опыт в технологиях не нужен.
+              <p className="text-white/25 fluid-xs max-w-lg mb-10">
+                Мой результат: $745 за 8 дней в апреле. Всего $1,875 за 3 месяца с одной модели. Ниже — как это работает и как начать.
               </p>
             </Reveal>
             <Reveal delay={450}>
               <div className="flex flex-col sm:flex-row gap-3 mb-8">
-                <a href="#история" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Как я это сделал <Icon name="ChevronDown" size={16} /></a>
-                <a href="#записаться" className="neon-btn-outline fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Хочу так же <Icon name="ArrowRight" size={16} /></a>
+                <a href="#история" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Узнать как это работает <Icon name="ChevronDown" size={16} /></a>
+                <a href="#записаться" className="neon-btn-outline fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center">Хочу начать <Icon name="ArrowRight" size={16} /></a>
               </div>
             </Reveal>
           </div>
@@ -143,7 +157,7 @@ export default function Index() {
         {/* Dashboard preview */}
         <div className="absolute bottom-16 right-8 hidden lg:block w-72 xl:w-80 float">
           <div className="screenshot-frame rounded-lg overflow-hidden opacity-60"><img src={DASHBOARD_IMG} alt="" className="w-full" /></div>
-          <div className="text-center mt-2 fluid-xs text-white/15 font-oswald tracking-wider uppercase">Мой дашборд — апрель 2026</div>
+          <div className="text-center mt-2 fluid-xs text-white/15 font-oswald tracking-wider uppercase">Реальный доход — апрель 2026</div>
         </div>
 
         {/* Scroll indicator */}
@@ -159,16 +173,16 @@ export default function Index() {
           <div className="content-width">
             <div className="grid grid-cols-3 gap-4">
               <div className="stat-block">
-                <div className="stat-number">$1,875</div>
-                <div className="stat-label">За 3 месяца</div>
+                <div className="stat-number">$50</div>
+                <div className="stat-label">Старт</div>
               </div>
               <div className="stat-block">
-                <div className="stat-number">×18</div>
-                <div className="stat-label">Рост дохода</div>
+                <div className="stat-number">4</div>
+                <div className="stat-label">Шага до дохода</div>
               </div>
               <div className="stat-block">
-                <div className="stat-number">1</div>
-                <div className="stat-label">AI-модель</div>
+                <div className="stat-number">35</div>
+                <div className="stat-label">Уже в клубе</div>
               </div>
             </div>
           </div>
@@ -181,9 +195,9 @@ export default function Index() {
         {/* ===== 1. ЦИФРЫ ===== */}
         <section id="история" className="section-spacing section-glow-green">
           <Reveal>
-            <div className="metric-badge mb-6">Мой результат</div>
-            <h2 className="font-oswald fluid-h2 font-bold mb-3">Сколько я заработал и за какое время</h2>
-            <p className="text-white/30 fluid-sm mb-8">Все цифры реальные. Одна модель. Работаю один.</p>
+            <div className="metric-badge mb-6">Реальный кейс</div>
+            <h2 className="font-oswald fluid-h2 font-bold mb-3">Сколько приносит одна AI-модель</h2>
+            <p className="text-white/30 fluid-sm mb-8">Результат одного участника клуба. Одна модель, работает один.</p>
           </Reveal>
 
           <Reveal><P>Апрель 2026, первые 8 дней.</P></Reveal>
@@ -320,7 +334,7 @@ export default function Index() {
             <div className="shimmer absolute inset-0 pointer-events-none" />
             <div className="relative z-10">
               <a href="#записаться" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest">
-                <Icon name="ArrowRight" size={16} /> Хочу в клуб — 9 900 ₽
+                <Icon name="ArrowRight" size={16} /> Начать зарабатывать — 9 900 ₽
               </a>
               <div className="fluid-xs text-white/20 mt-3">Один раз. Навсегда. Все обновления бесплатно.</div>
             </div>
@@ -399,8 +413,8 @@ export default function Index() {
         {/* ===== 7. ЧТО ВНУТРИ ===== */}
         <section className="section-spacing section-glow-green">
           <Reveal>
-            <h2 className="font-oswald fluid-h2 font-bold mb-3">Что вы получите в закрытом клубе</h2>
-            <p className="text-white/30 fluid-sm mb-8">Не курс. Закрытое сообщество с готовой системой. Зашёл — делаешь.</p>
+            <h2 className="font-oswald fluid-h2 font-bold mb-3">Всё что нужно для старта — уже готово</h2>
+            <p className="text-white/30 fluid-sm mb-8">Не курс с видео. Закрытый клуб с системой, шаблонами и поддержкой. Зашёл — делаешь.</p>
           </Reveal>
 
           <Screenshot id="club-telegram" label="Структура клуба в Telegram" sublabel="Разделы: старт, прогрев, контент, монетизация, автоматизация" />
@@ -455,7 +469,7 @@ export default function Index() {
         {/* ===== 8. ДЛЯ КОГО ===== */}
         <section className="section-spacing">
           <Reveal>
-            <h2 className="font-oswald fluid-h2 font-bold mb-8">Для кого это подходит</h2>
+            <h2 className="font-oswald fluid-h2 font-bold mb-8">Подойдёт ли это тебе</h2>
           </Reveal>
 
           <Reveal>
@@ -477,8 +491,8 @@ export default function Index() {
         {/* ===== 9. СТОИМОСТЬ ===== */}
         <section className="section-spacing section-glow-green">
           <Reveal>
-            <h2 className="font-oswald fluid-h2 font-bold mb-3">Прозрачная экономика</h2>
-            <p className="text-white/30 fluid-sm mb-8">Сколько стоит запуск, ежемесячные расходы и почём клуб</p>
+            <h2 className="font-oswald fluid-h2 font-bold mb-3">Сколько ты вложишь и что получишь</h2>
+            <p className="text-white/30 fluid-sm mb-8">Полная прозрачность: запуск, ежемесячные расходы, стоимость клуба</p>
           </Reveal>
 
           <Reveal>
@@ -561,7 +575,7 @@ export default function Index() {
             <div className="text-center mb-10">
               <div className="font-oswald font-bold mb-3 gradient-text" style={{ fontSize: 'clamp(3rem, 4vw + 1rem, 5rem)' }}>9 900 ₽</div>
               <div className="text-white/50 fluid-body mb-1">Один раз. Навсегда.</div>
-              <div className="text-white/25 fluid-sm max-w-lg mx-auto">Заплатил — доступ ко всему навсегда. Обновления, новые материалы, автоматизация — бесплатно.</div>
+              <div className="text-white/25 fluid-sm max-w-lg mx-auto">Заплатил один раз — получил всё. Обновления, новые инструменты, поддержка — навсегда.</div>
             </div>
           </Reveal>
 
@@ -577,8 +591,8 @@ export default function Index() {
             ) : (
               <form onSubmit={handleSubmit} className="rounded-xl card-padding-lg space-y-4" style={{ border: '1px solid rgba(0,255,136,0.12)', background: 'rgba(0,255,136,0.02)' }}>
                 <div className="text-center mb-3">
-                  <div className="font-oswald fluid-body font-semibold tracking-wide mb-1">Напиши мне — расскажу подробнее</div>
-                  <div className="fluid-xs text-white/30">Отвечу на вопросы, помогу с оплатой</div>
+                  <div className="font-oswald fluid-body font-semibold tracking-wide mb-1">Оставь контакт — расскажу подробности</div>
+                  <div className="fluid-xs text-white/30">Отвечу на любые вопросы и помогу начать</div>
                 </div>
                 <div>
                   <input type="text" placeholder="Имя" value={name} onChange={(e) => setName(e.target.value)} required className="w-full rounded-lg px-4 py-3.5 text-white fluid-sm focus:outline-none transition-all" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }} onFocus={(e) => e.target.style.borderColor = 'rgba(0,255,136,0.3)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.06)'} />
@@ -586,7 +600,7 @@ export default function Index() {
                 <div>
                   <input type="text" placeholder="@username в Telegram" value={tg} onChange={(e) => setTg(e.target.value)} required className="w-full rounded-lg px-4 py-3.5 fluid-sm focus:outline-none transition-all" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', color: 'white' }} onFocus={(e) => e.target.style.borderColor = 'rgba(0,255,136,0.3)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.06)'} />
                 </div>
-                <button type="submit" className="neon-btn w-full py-4 rounded-lg uppercase tracking-widest fluid-btn flex items-center justify-center gap-2"><Icon name="ArrowRight" size={16} /> Записаться в клуб</button>
+                <button type="submit" className="neon-btn w-full py-4 rounded-lg uppercase tracking-widest fluid-btn flex items-center justify-center gap-2"><Icon name="ArrowRight" size={16} /> Начать зарабатывать</button>
               </form>
             )}
           </Reveal>
