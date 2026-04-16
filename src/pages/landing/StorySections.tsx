@@ -74,7 +74,7 @@ export default function StorySections() {
 
         <Reveal>
           <div className="screenshot-frame my-8 rounded-lg overflow-hidden">
-            <img src={PROCESS_IMG} alt="" className="w-full" />
+            <ImgPlaceholder label="Процесс создания AI-модели" sublabel="" hint="Скрин/фото процесса генерации персонажа" />
             <div className="px-4 py-3" style={{ background: 'rgba(0,0,0,0.5)', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
               <div className="fluid-xs font-oswald tracking-wider uppercase text-white/40">Процесс создания AI-модели</div>
               <div className="fluid-xs text-white/20 mt-0.5">Нейросеть генерирует уникальное лицо и контент</div>
