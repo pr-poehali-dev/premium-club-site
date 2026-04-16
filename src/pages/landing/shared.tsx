@@ -3,9 +3,9 @@ import Icon from "@/components/ui/icon";
 
 export const TG_LINK = "https://t.me/m/eyoLAGiRODcy";
 
-export const HERO_IMG = "https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/files/b8a97a42-24a2-4662-a883-591690c97c67.jpg";
-export const PROCESS_IMG = "https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/files/fe985d6b-262c-4477-89f0-f547e3c10cce.jpg";
-export const DASHBOARD_IMG = "https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/files/b7817c43-1c8a-45c8-89b9-59206bc00660.jpg";
+export const HERO_IMG = "";
+export const PROCESS_IMG = "";
+export const DASHBOARD_IMG = "";
 
 export function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -33,23 +33,22 @@ export const Bridge = () => (
   </div>
 );
 
+export const ImgPlaceholder = ({ label, sublabel, hint, ratio = '16/9' }: { label: string; sublabel: string; hint: string; ratio?: string }) => (
+  <div className="w-full flex flex-col items-center justify-center gap-3 p-8" style={{ aspectRatio: ratio, background: 'rgba(0,255,136,0.02)', border: '1px dashed rgba(0,255,136,0.15)', borderRadius: '0' }}>
+    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ border: '1px dashed rgba(0,255,136,0.25)', background: 'rgba(0,255,136,0.04)' }}>
+      <Icon name="ImagePlus" size={20} style={{ color: 'rgba(0,255,136,0.35)' } as React.CSSProperties} />
+    </div>
+    <div className="text-center">
+      <div className="font-oswald text-xs tracking-widest uppercase mb-1" style={{ color: 'rgba(0,255,136,0.5)' }}>{label}</div>
+      <div className="text-xs text-white/25">{hint}</div>
+    </div>
+  </div>
+);
+
 export const Screenshot = ({ label, sublabel, id }: { label: string; sublabel: string; id: string }) => (
   <Reveal>
     <div className="screenshot-frame my-8">
-      <img src={`/screenshots/${id}.png`} alt={label} className="w-full"
-        onError={(e) => {
-          const t = e.target as HTMLImageElement;
-          t.style.display = 'none';
-          const p = t.parentElement;
-          if (p && !p.querySelector('.ph')) {
-            const d = document.createElement('div');
-            d.className = 'ph';
-            d.style.cssText = 'aspect-ratio:16/10;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,255,136,0.02);padding:2rem;';
-            d.innerHTML = `<div style="width:48px;height:48px;border-radius:8px;border:1px dashed rgba(0,255,136,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0,255,136,0.3)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div><div style="font-family:Oswald;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-align:center">${label}</div><div style="font-size:10px;color:rgba(255,255,255,0.12);margin-top:4px;text-align:center">/screenshots/${id}.png</div>`;
-            p.appendChild(d);
-          }
-        }}
-      />
+      <ImgPlaceholder label={label} sublabel={sublabel} hint={`Загрузи скрин: ${id}`} />
       <div className="px-4 py-3" style={{ background: 'rgba(0,0,0,0.5)', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
         <div className="fluid-xs font-oswald tracking-wider uppercase text-white/45">{label}</div>
         <div className="fluid-xs text-white/20 mt-0.5">{sublabel}</div>
