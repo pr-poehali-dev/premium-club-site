@@ -16,7 +16,7 @@ export default function StorySections() {
 
         <Reveal>
           <div className="screenshot-frame my-8 rounded-lg overflow-hidden">
-            <ImgPlaceholder label="Fanvue — апрель 2026, первые 8 дней" sublabel="" hint="Скрин Fanvue с $745.61 за апрель + $1,875.21 суммарно" />
+            <img src="https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/338a2c0c-100b-4c47-af06-7ab6f5aec033.png" alt="Fanvue — апрель 2026" className="w-full" />
             <div className="px-4 py-3" style={{ background: 'rgba(0,0,0,0.5)', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
               <div className="fluid-xs font-oswald tracking-wider uppercase text-white/45">Fanvue — апрель 2026, первые 8 дней</div>
               <div className="fluid-xs text-white/20 mt-0.5">$745.61 за месяц · $1,875.21 суммарно с февраля · одна AI-модель</div>
