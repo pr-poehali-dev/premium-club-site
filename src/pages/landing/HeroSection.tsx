@@ -1,5 +1,5 @@
 import Icon from "@/components/ui/icon";
-import { Reveal, G, TG_LINK, ImgPlaceholder } from "./shared";
+import { Reveal, G, TG_LINK, ImgPlaceholder, HERO_IMG, DASHBOARD_IMG } from "./shared";
 
 export default function HeroSection() {
   return (
@@ -17,7 +17,7 @@ export default function HeroSection() {
       {/* ===== HERO ===== */}
       <section className="relative min-h-screen flex items-center pt-14 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          {/* HERO_IMG placeholder — загрузи фоновое изображение */}
+          <img src={HERO_IMG} alt="" className="w-full h-full object-cover object-top opacity-25" />
           <div className="hero-gradient absolute inset-0" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(0,0,0,0.95) 35%, rgba(0,0,0,0.4) 100%)' }} />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #0a0a0a 8%, transparent 45%)' }} />
@@ -83,7 +83,7 @@ export default function HeroSection() {
 
         {/* Dashboard preview */}
         <div className="absolute bottom-16 right-8 hidden lg:block w-72 xl:w-80 float">
-          <div className="screenshot-frame rounded-lg overflow-hidden opacity-60"><ImgPlaceholder label="Dashboard" sublabel="" hint="Скрин дашборда с доходом" ratio="16/9" /></div>
+          <div className="screenshot-frame rounded-lg overflow-hidden opacity-60"><img src={DASHBOARD_IMG} alt="" className="w-full" /></div>
           <div className="text-center mt-2 fluid-xs text-white/15 font-oswald tracking-wider uppercase">Реальный доход — апрель 2026</div>
         </div>
 
