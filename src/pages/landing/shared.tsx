@@ -5,7 +5,7 @@ export const TG_LINK = "https://t.me/m/eyoLAGiRODcy";
 
 export const HERO_IMG = "https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/files/b8a97a42-24a2-4662-a883-591690c97c67.jpg";
 export const PROCESS_IMG = "https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/files/fe985d6b-262c-4477-89f0-f547e3c10cce.jpg";
-export const DASHBOARD_IMG = "https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/338a2c0c-100b-4c47-af06-7ab6f5aec033.png";
+export const DASHBOARD_IMG = "https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/files/b7817c43-1c8a-45c8-89b9-59206bc00660.jpg";
 
 export function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
