@@ -26,28 +26,28 @@ export default function HeroSection() {
         <div className="hero-line absolute top-2/3 right-0 w-[200px]" style={{ background: 'linear-gradient(to left, transparent, rgba(168,85,247,0.2), transparent)' }} />
         <div className="absolute top-1/2 right-16 w-px h-32 hidden md:block" style={{ background: 'linear-gradient(to bottom, rgba(0,255,136,0.3), transparent)' }} />
 
-        <div className="container mx-auto px-4 relative z-10 py-16 md:py-32 lg:py-40">
+        <div className="container mx-auto px-4 relative z-10 py-8 md:py-16 lg:py-20">
           <div className="max-w-3xl">
             <Reveal>
-              <div className="metric-badge mb-5 md:mb-8">
+              <div className="metric-badge mb-3 md:mb-5">
                 <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 Готовая система — 35 человек уже зарабатывают
               </div>
             </Reveal>
             <Reveal delay={100}>
-              <h1 className="font-oswald font-bold leading-[1.05] mb-5 md:mb-8">
+              <h1 className="font-oswald font-bold leading-[1.05] mb-4 md:mb-6">
                 <span className="gradient-text fluid-hero">Запусти AI-инфлюенсера</span><br />
                 <span className="text-white fluid-hero-sub">который зарабатывает</span><br />
                 <span className="fluid-hero-sub" style={{ color: '#00ff88', textShadow: '0 0 30px rgba(0,255,136,0.3)' }}>без твоего лица и голоса.</span>
               </h1>
             </Reveal>
             <Reveal delay={250}>
-              <p className="text-white/55 fluid-body max-w-2xl mb-5">
+              <p className="text-white/55 fluid-body max-w-2xl mb-3">
                 Нейросеть создаёт персонажа — лицо, которого не существует. Ты публикуешь его контент. Подписчики платят. Тебя никто не видит.
               </p>
             </Reveal>
             <Reveal delay={300}>
-              <div className="flex items-center gap-3 mb-5 flex-wrap">
+              <div className="flex items-center gap-3 mb-3 flex-wrap">
                 {[
                   { icon: "Monitor", label: "Только ноутбук" },
                   { icon: "Clock", label: "2–3 часа в день" },
@@ -61,7 +61,7 @@ export default function HeroSection() {
               </div>
             </Reveal>
             <Reveal delay={350}>
-              <p className="text-white/25 fluid-xs max-w-lg mb-8">
+              <p className="text-white/25 fluid-xs max-w-lg mb-4">
                 Мой результат: $745 за 8 дней в апреле · $1,875 за 3 месяца · одна модель
               </p>
             </Reveal>

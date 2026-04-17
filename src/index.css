@@ -436,10 +436,10 @@
 
 /* ===== FLUID TYPOGRAPHY ===== */
 .fluid-hero {
-  font-size: clamp(2.5rem, 4vw + 1rem, 5.5rem);
+  font-size: clamp(2rem, 3.5vw + 0.8rem, 4.2rem);
 }
 .fluid-hero-sub {
-  font-size: clamp(1.8rem, 2.5vw + 0.8rem, 3.5rem);
+  font-size: clamp(1.4rem, 2vw + 0.6rem, 2.8rem);
 }
 .fluid-h2 {
   font-size: clamp(1.6rem, 2vw + 0.6rem, 3rem);
