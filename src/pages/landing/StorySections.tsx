@@ -270,7 +270,7 @@ export default function StorySections() {
           <div className="relative my-8 rounded-xl overflow-hidden" style={{ border: '1px solid rgba(0,255,136,0.15)' }}>
             {/* Скрин — видно ~60%, остальное размыто */}
             <div className="relative" style={{ height: 'clamp(260px, 45vw, 400px)', overflow: 'hidden' }}>
-              <ImgPlaceholder label="Структура клуба AI Models Factory" sublabel="" hint="Скрин структуры клуба" ratio="16/9" />
+              <img src="https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/3c947c91-977a-4192-9165-8955fe270d9d.png" alt="Структура клуба AI Models Factory" className="w-full h-full object-cover object-top" />
               {/* Градиентное размытие снизу */}
               <div className="absolute inset-0" style={{
                 background: 'linear-gradient(to bottom, transparent 35%, rgba(10,10,10,0.6) 60%, rgba(10,10,10,0.97) 85%, #0a0a0a 100%)'
