@@ -28,11 +28,7 @@ export default function StorySections() {
 
         <Reveal>
           <div className="screenshot-frame my-8">
-            <img
-              src="https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/374f4bcf-3aeb-405b-aa2b-491cb07931d9.png"
-              alt="Fanvue dashboard — $927.83 с февраля 2026"
-              className="w-full"
-            />
+            <ImgPlaceholder label="Fanvue — доход с февраля 2026" sublabel="" hint="Скрин Fanvue с $927.83 за полтора месяца" />
             <div className="px-4 py-3" style={{ background: 'rgba(0,0,0,0.5)', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
               <div className="fluid-xs font-oswald tracking-wider uppercase text-white/45">Fanvue — доход с февраля 2026</div>
               <div className="fluid-xs text-white/20 mt-0.5">$927.83 за полтора месяца · одна AI-модель</div>
@@ -274,12 +270,7 @@ export default function StorySections() {
           <div className="relative my-8 rounded-xl overflow-hidden" style={{ border: '1px solid rgba(0,255,136,0.15)' }}>
             {/* Скрин — видно ~60%, остальное размыто */}
             <div className="relative" style={{ height: 'clamp(260px, 45vw, 400px)', overflow: 'hidden' }}>
-              <img
-                src="https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/63b2996a-8783-4ebb-9d2b-ad1ccd05865a.png"
-                alt="Структура клуба AI Models Factory"
-                className="w-full"
-                style={{ objectFit: 'cover', objectPosition: 'top', height: '100%' }}
-              />
+              <ImgPlaceholder label="Структура клуба AI Models Factory" sublabel="" hint="Скрин структуры клуба" ratio="16/9" />
               {/* Градиентное размытие снизу */}
               <div className="absolute inset-0" style={{
                 background: 'linear-gradient(to bottom, transparent 35%, rgba(10,10,10,0.6) 60%, rgba(10,10,10,0.97) 85%, #0a0a0a 100%)'
