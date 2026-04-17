@@ -1,7 +1,10 @@
 import Icon from "@/components/ui/icon";
-import { Reveal, Bridge, Screenshot, ImgPlaceholder, P, W, TG_LINK, PROCESS_IMG } from "./shared";
+import { Reveal, Bridge, Screenshot, ImgPlaceholder, P, W, PROCESS_IMG } from "./shared";
+import CtaButton from "./CtaButton";
+import { useCtaContext } from "@/hooks/useCtaContext";
 
 export default function StorySections() {
+  const { isInTelegram } = useCtaContext();
   return (
     <>
       {/* ===== 1. ЦИФРЫ ===== */}
@@ -175,12 +178,14 @@ export default function StorySections() {
               <Icon name="Users" size={14} style={{ color: 'rgba(0,255,136,0.5)' } as React.CSSProperties} />
               <span>Сейчас в клубе <strong className="text-white/60">35 из 50</strong> мест</span>
             </div>
-            <a href={TG_LINK} target="_blank" rel="noopener noreferrer" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest">
+            <CtaButton className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest">
               Занять место в клубе <Icon name="ArrowRight" size={16} />
-            </a>
-            <div className="fluid-xs text-white/20 mt-3">
-              Откроется мой Telegram — там всё обсудим и оформим вступление
-            </div>
+            </CtaButton>
+            {!isInTelegram && (
+              <div className="fluid-xs text-white/20 mt-3">
+                Откроется мой Telegram - там всё обсудим и оформим вступление
+              </div>
+            )}
             <div className="fluid-xs text-white/15 mt-1">После 50 участников цена — 14 900 ₽</div>
           </div>
         </div>
@@ -283,14 +288,9 @@ export default function StorySections() {
                 <p className="fluid-xs text-white/40 text-center mb-4 max-w-xs">
                   14 закрытых разделов · видео-инструкции · шаблоны · скрипты · автоматизация
                 </p>
-                <a
-                  href={TG_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="neon-btn fluid-btn-sm rounded-lg inline-flex items-center gap-2 uppercase tracking-widest"
-                >
+                <CtaButton className="neon-btn fluid-btn-sm rounded-lg inline-flex items-center gap-2 uppercase tracking-widest">
                   <Icon name="Unlock" size={14} /> Получить доступ
-                </a>
+                </CtaButton>
               </div>
             </div>
             {/* Подпись */}

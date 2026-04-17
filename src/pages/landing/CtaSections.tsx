@@ -1,9 +1,12 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
-import { Reveal, Bridge, FAQItem, TG_LINK } from "./shared";
+import { Reveal, Bridge, FAQItem } from "./shared";
+import CtaButton from "./CtaButton";
+import { useCtaContext } from "@/hooks/useCtaContext";
 
 export default function CtaSections() {
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
+  const { isInTelegram } = useCtaContext();
 
   return (
     <>
@@ -216,14 +219,12 @@ export default function CtaSections() {
 
             {/* TG button */}
             <div className="p-6">
-              <a
-                href={TG_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="neon-btn w-full py-4 rounded-xl uppercase tracking-widest fluid-btn flex items-center justify-center gap-3 pulse-neon"
-              >
+              <CtaButton className="neon-btn w-full py-4 rounded-xl uppercase tracking-widest fluid-btn flex items-center justify-center gap-3 pulse-neon">
                 Начать зарабатывать <Icon name="ArrowRight" size={18} />
-              </a>
+              </CtaButton>
+              {!isInTelegram && (
+                <p className="fluid-xs text-white/25 text-center mt-3">Нажми - откроется мой диалог в Telegram</p>
+              )}
             </div>
           </div>
         </Reveal>

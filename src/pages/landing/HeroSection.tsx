@@ -1,16 +1,22 @@
 import Icon from "@/components/ui/icon";
 import { Reveal, G, TG_LINK, ImgPlaceholder, HERO_IMG, DASHBOARD_IMG } from "./shared";
+import { useCtaContext } from "@/hooks/useCtaContext";
+import { useTelegram } from "@/hooks/useTelegram";
+import CtaButton from "./CtaButton";
 
 export default function HeroSection() {
+  const { isInTelegram } = useCtaContext();
+  const { user } = useTelegram();
+
   return (
     <>
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5" style={{ background: 'rgba(10,10,10,0.85)', backdropFilter: 'blur(20px)' }}>
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="font-oswald fluid-xs font-bold tracking-widest">AI <G>MODELS</G> FACTORY</div>
-          <a href={TG_LINK} target="_blank" rel="noopener noreferrer" className="neon-btn fluid-btn-sm rounded-md uppercase tracking-widest flex items-center gap-1.5">
+          <CtaButton className="neon-btn fluid-btn-sm rounded-md uppercase tracking-widest flex items-center gap-1.5">
             Вступить в клуб
-          </a>
+          </CtaButton>
         </div>
       </nav>
 
@@ -29,10 +35,17 @@ export default function HeroSection() {
         <div className="container mx-auto px-4 relative z-10 py-8 md:py-16 lg:py-20">
           <div className="max-w-3xl">
             <Reveal>
-              <div className="metric-badge mb-3 md:mb-5">
-                <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                Готовая система — 35 человек уже зарабатывают
-              </div>
+              {isInTelegram && user ? (
+                <div className="metric-badge mb-3 md:mb-5">
+                  <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  Привет, {user.first_name}!
+                </div>
+              ) : (
+                <div className="metric-badge mb-3 md:mb-5">
+                  <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  Готовая система - 35 человек уже зарабатывают
+                </div>
+              )}
             </Reveal>
             <Reveal delay={100}>
               <h1 className="font-oswald font-bold leading-[1.05] mb-4 md:mb-6">
@@ -43,14 +56,14 @@ export default function HeroSection() {
             </Reveal>
             <Reveal delay={250}>
               <p className="text-white/55 fluid-body max-w-2xl mb-3">
-                Нейросеть создаёт персонажа — лицо, которого не существует. Ты публикуешь его контент. Подписчики платят. Тебя никто не видит.
+                Нейросеть создаёт персонажа - лицо, которого не существует. Ты публикуешь его контент. Подписчики платят. Тебя никто не видит.
               </p>
             </Reveal>
             <Reveal delay={300}>
               <div className="flex items-center gap-3 mb-3 flex-wrap">
                 {[
                   { icon: "Monitor", label: "Только ноутбук" },
-                  { icon: "Clock", label: "2–3 часа в день" },
+                  { icon: "Clock", label: "2-3 часа в день" },
                   { icon: "UserX", label: "Без своего лица" },
                 ].map(s => (
                   <div key={s.label} className="flex items-center gap-2 rounded-full px-3 py-2" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
@@ -62,7 +75,7 @@ export default function HeroSection() {
             </Reveal>
             <Reveal delay={350}>
               <p className="text-white/25 fluid-xs max-w-lg mb-4">
-                Мой результат: $745 за 8 дней в апреле · $1,875 за 3 месяца · одна модель
+                Мой результат: $745 за 8 дней в апреле - $1,875 за 3 месяца - одна модель
               </p>
             </Reveal>
             <Reveal delay={450}>
@@ -70,13 +83,15 @@ export default function HeroSection() {
                 <a href="#история" className="neon-btn fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center w-full sm:w-auto">
                   Как это работает <Icon name="ChevronDown" size={16} />
                 </a>
-                <a href={TG_LINK} target="_blank" rel="noopener noreferrer" className="neon-btn-outline fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center w-full sm:w-auto">
+                <CtaButton className="neon-btn-outline fluid-btn rounded-lg inline-flex items-center gap-2 uppercase tracking-widest justify-center w-full sm:w-auto">
                   Начать зарабатывать <Icon name="ArrowRight" size={15} />
-                </a>
+                </CtaButton>
               </div>
-              <p className="fluid-xs text-white/20">
-                Кнопка «Начать зарабатывать» откроет мой диалог в Telegram
-              </p>
+              {!isInTelegram && (
+                <p className="fluid-xs text-white/20">
+                  Кнопка откроет мой диалог в Telegram
+                </p>
+              )}
             </Reveal>
           </div>
         </div>
@@ -84,7 +99,7 @@ export default function HeroSection() {
         {/* Dashboard preview */}
         <div className="absolute bottom-16 right-8 hidden lg:block w-72 xl:w-80 float">
           <div className="screenshot-frame rounded-lg overflow-hidden opacity-60"><img src={DASHBOARD_IMG} alt="" className="w-full" /></div>
-          <div className="text-center mt-2 fluid-xs text-white/15 font-oswald tracking-wider uppercase">Реальный доход — апрель 2026</div>
+          <div className="text-center mt-2 fluid-xs text-white/15 font-oswald tracking-wider uppercase">Реальный доход - апрель 2026</div>
         </div>
 
         {/* Scroll indicator */}
