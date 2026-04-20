@@ -10,18 +10,18 @@ export default function StorySections() {
       {/* ===== 1. ЦИФРЫ ===== */}
       <section id="история" className="section-spacing section-glow-green">
         <Reveal>
-          <div className="metric-badge mb-6">Мой результат — твоя возможность</div>
+          <div className="metric-badge mb-6">Мой результат, твоя возможность</div>
           <h2 className="font-oswald fluid-h2 font-bold mb-3">Сколько приносит одна AI-модель</h2>
-          <p className="text-white/30 fluid-sm mb-8">Мой реальный доход за 3 месяца. Одна модель, работаю один. Всё что я использую — есть в клубе.</p>
+          <p className="text-white/30 fluid-sm mb-8">Мой реальный доход за 3 месяца. Одна модель, работаю один. Всё что использую есть в клубе.</p>
         </Reveal>
 
         <Reveal><P>Апрель 2026, первые 8 дней.</P></Reveal>
 
         <Reveal>
           <div className="screenshot-frame my-8 rounded-lg overflow-hidden">
-            <img src="https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/338a2c0c-100b-4c47-af06-7ab6f5aec033.png" alt="Fanvue — апрель 2026" className="w-full" />
+            <img src="https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/338a2c0c-100b-4c47-af06-7ab6f5aec033.png" alt="Fanvue, апрель 2026" className="w-full" />
             <div className="px-4 py-3" style={{ background: 'rgba(0,0,0,0.5)', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
-              <div className="fluid-xs font-oswald tracking-wider uppercase text-white/45">Fanvue — апрель 2026, первые 8 дней</div>
+              <div className="fluid-xs font-oswald tracking-wider uppercase text-white/45">Fanvue · апрель 2026 · первые 8 дней</div>
               <div className="fluid-xs text-white/20 mt-0.5">$745.61 за месяц · $1,875.21 суммарно с февраля · одна AI-модель</div>
             </div>
           </div>
@@ -31,9 +31,9 @@ export default function StorySections() {
 
         <Reveal>
           <div className="screenshot-frame my-8">
-            <img src="https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/64f9c66b-8c2e-4aba-8ff1-a87a7696adc7.png" alt="Fanvue — доход с февраля 2026" className="w-full" />
+            <img src="https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/64f9c66b-8c2e-4aba-8ff1-a87a7696adc7.png" alt="Fanvue, доход с февраля 2026" className="w-full" />
             <div className="px-4 py-3" style={{ background: 'rgba(0,0,0,0.5)', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
-              <div className="fluid-xs font-oswald tracking-wider uppercase text-white/45">Fanvue — доход с февраля 2026</div>
+              <div className="fluid-xs font-oswald tracking-wider uppercase text-white/45">Fanvue · доход с февраля 2026</div>
               <div className="fluid-xs text-white/20 mt-0.5">$927.83 за полтора месяца · одна AI-модель</div>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function StorySections() {
           </div>
         </Reveal>
 
-        <Reveal><P>Дальше покажу как это устроено изнутри. Моя реальная кухня — без теории.</P></Reveal>
+        <Reveal><P>Дальше покажу как это устроено изнутри. Моя реальная кухня, без теории.</P></Reveal>
       </section>
 
       <Bridge />
@@ -65,11 +65,11 @@ export default function StorySections() {
       {/* ===== 2. ЧТО ЭТО ТАКОЕ ===== */}
       <section className="section-spacing section-glow-cyan">
         <Reveal>
-          <h2 className="font-oswald fluid-h2 font-bold mb-3">Виртуальные инфлюенсеры — рынок на $24 миллиарда</h2>
+          <h2 className="font-oswald fluid-h2 font-bold mb-3">Виртуальные инфлюенсеры. Рынок на $32 миллиарда в 2026</h2>
           <p className="text-white/30 fluid-sm mb-8">И в нём почти нет русскоязычных</p>
         </Reveal>
 
-        <Reveal><P>Нейросеть создаёт уникального персонажа — лицо, которое не принадлежит ни одному реальному человеку. Дальше она же делает фотосессии в любых стилях, видео, контент. Ты публикуешь его в TikTok и Instagram. Аудитория растёт.</P></Reveal>
+        <Reveal><P>Нейросеть создаёт уникального персонажа. Лицо, которое не принадлежит ни одному реальному человеку. Дальше она же делает фотосессии в любых стилях, видео, контент. Ты публикуешь его в TikTok и Instagram. Аудитория растёт.</P></Reveal>
 
         <Reveal>
           <div className="screenshot-frame my-8 rounded-lg overflow-hidden">
@@ -86,9 +86,9 @@ export default function StorySections() {
           <div className="rounded-xl card-padding-lg mb-6" style={{ background: 'rgba(0,255,136,0.03)', border: '1px solid rgba(0,255,136,0.1)' }}>
             <div className="space-y-4 fluid-sm">
               {[
-                { icon: "Globe", text: <>Рынок инфлюенсер-маркетинга — <W>$24 млрд</W> в 2025 году. Прогноз — $71 млрд к 2032</> },
-                { icon: "User", text: <>AI-модель Aitana Lopez (Испания) — <W>€10,000/мес</W>. Создана двумя дизайнерами</> },
-                { icon: "TrendingUp", text: <>Emily Pellegrini — <W>$23,000 за один месяц</W> на Fanvue</> },
+                { icon: "Globe", text: <>Рынок инфлюенсер-маркетинга в 2026: <W>$32 млрд</W>. Прогноз: $71 млрд к 2032</> },
+                { icon: "User", text: <>AI-модель Aitana Lopez (Испания): <W>€10,000/мес</W>. Создана двумя дизайнерами</> },
+                { icon: "TrendingUp", text: <>Emily Pellegrini: <W>$23,000 за один месяц</W> на Fanvue</> },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className="w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: 'rgba(0,255,136,0.08)', border: '1px solid rgba(0,255,136,0.15)' }}>
@@ -104,7 +104,7 @@ export default function StorySections() {
         <Reveal><P accent>Монетизация идёт тремя путями:</P></Reveal>
         <Reveal>
           <div className="space-y-3 mb-6">
-            {[["Megaphone", "Реклама — бренды платят за размещение у инфлюенсера с аудиторией"], ["ShoppingBag", "Свои продукты — направляешь трафик куда хочешь"], ["CreditCard", "Платные площадки — подписчики платят за эксклюзивный контент"]].map(([icon, text]) => (
+            {[["Megaphone", "Реклама. Бренды платят за размещение у инфлюенсера с аудиторией"], ["ShoppingBag", "Свои продукты. Направляешь трафик куда хочешь"], ["CreditCard", "Платные площадки. Подписчики платят за эксклюзивный контент"]].map(([icon, text]) => (
               <div key={text} className="flex items-start gap-3">
                 <Icon name={icon} size={16} className="flex-shrink-0 mt-1" style={{ color: '#00e5ff' } as React.CSSProperties} />
                 <span className="text-white/55 fluid-sm">{text}</span>
@@ -115,7 +115,7 @@ export default function StorySections() {
 
         <Reveal>
           <div className="pull-quote my-8">
-            <P accent>Тот, у кого есть органический трафик — в деньгах не нуждается. Виртуальный инфлюенсер — это машина, которая генерирует трафик на любую аудиторию мира.</P>
+            <P accent>Тот, у кого есть органический трафик, в деньгах не нуждается. Виртуальный инфлюенсер это машина, которая генерирует трафик на любую аудиторию мира.</P>
           </div>
         </Reveal>
 
@@ -128,14 +128,14 @@ export default function StorySections() {
       <section className="section-spacing">
         <Reveal>
           <h2 className="font-oswald fluid-h2 font-bold mb-3">Почему я начал этим заниматься</h2>
-          <p className="text-white/30 fluid-sm mb-8">Я строю системы автоматизации. Это — одна из них.</p>
+          <p className="text-white/30 fluid-sm mb-8">Я строю системы автоматизации. Это одна из них.</p>
         </Reveal>
 
         <Reveal><P>В декабре копался в западном рынке. Наткнулся на виртуальных инфлюенсеров. Купил курс у зарубежного эксперта. Начал разбираться.</P></Reveal>
         <Reveal><P>Обалдел от двух вещей.</P></Reveal>
-        <Reveal><P><W>Первая</W> — цифры. Люди зарабатывают от нескольких тысяч до десятков тысяч долларов в месяц. На персонажах которых не существует.</P></Reveal>
-        <Reveal><P><W>Вторая</W> — почти все делают это вручную. Сидят часами: ищут идеи для контента, генерируют, обрабатывают, отвечают подписчикам. По полдня на одну модель.</P></Reveal>
-        <Reveal><P>Хотя сама генерация — не проблема. Настоящая проблема — понять <W>ЧТО</W> генерировать. Какой контент зайдёт, что сейчас в тренде.</P></Reveal>
+        <Reveal><P><W>Первая.</W> Цифры. Люди зарабатывают от нескольких тысяч до десятков тысяч долларов в месяц. На персонажах которых не существует.</P></Reveal>
+        <Reveal><P><W>Вторая.</W> Почти все делают это вручную. Сидят часами: ищут идеи для контента, генерируют, обрабатывают, отвечают подписчикам. По полдня на одну модель.</P></Reveal>
+        <Reveal><P>Хотя сама генерация не проблема. Настоящая проблема понять <W>ЧТО</W> генерировать. Какой контент зайдёт, что сейчас в тренде.</P></Reveal>
       </section>
 
       <Bridge />
@@ -144,14 +144,14 @@ export default function StorySections() {
       <section className="section-spacing section-glow-purple">
         <Reveal>
           <h2 className="font-oswald fluid-h2 font-bold mb-3">Три ошибки, которые стоили мне 2 месяца</h2>
-          <p className="text-white/30 fluid-sm mb-8">Первый месяц — $40. Вот почему.</p>
+          <p className="text-white/30 fluid-sm mb-8">Первый месяц $40. Вот почему.</p>
         </Reveal>
 
         <div className="space-y-3 my-6">
           {[
-            { title: "Ошибка 1: прогрев аккаунта", text: "Первый TikTok — бан через 5 дней. Второй — бан через неделю. Соцсети банят новые аккаунты если сразу начинаешь активно постить. Потерял 2 аккаунта и $100 на контент." },
-            { title: "Ошибка 2: настройка генерации", text: "Нейросеть которая запоминает лицо персонажа — штука капризная. Первые три попытки были мусором: лицо то не похоже, то «поплыло»." },
-            { title: "Ошибка 3: общение с подписчиками", text: "Человек подписывается, пишет «привет» — а я не знаю что ответить. Он уходит. $20–50 потенциального дохода испарились." },
+            { title: "Ошибка 1: прогрев аккаунта", text: "Первый TikTok забанили через 5 дней. Второй через неделю. Соцсети банят новые аккаунты если сразу начинаешь активно постить. Потерял 2 аккаунта и $100 на контент." },
+            { title: "Ошибка 2: настройка генерации", text: "Нейросеть которая запоминает лицо персонажа штука капризная. Первые три попытки были мусором: лицо то не похоже, то «поплыло»." },
+            { title: "Ошибка 3: общение с подписчиками", text: "Человек подписывается, пишет «привет», а я не знаю что ответить. Он уходит. От $20 до $50 потенциального дохода испарились." },
           ].map((e, i) => (
             <Reveal key={e.title} delay={i * 100}>
               <div className="error-card rounded-lg card-padding pl-7">
@@ -164,7 +164,7 @@ export default function StorySections() {
 
         <Reveal>
           <div className="rounded-xl card-padding" style={{ background: 'rgba(0,255,136,0.04)', border: '1px solid rgba(0,255,136,0.12)' }}>
-            <p className="fluid-sm leading-relaxed" style={{ color: 'rgba(0,255,136,0.85)' }}>Когда закрыл все три — рост пошёл моментально. С $40 до $745 за 8 дней. Те самые ошибки, на которые я потратил 2 месяца — <strong>в клубе закрыты с первого дня.</strong></p>
+            <p className="fluid-sm leading-relaxed" style={{ color: 'rgba(0,255,136,0.85)' }}>Когда закрыл все три, рост пошёл моментально. С $40 до $745 за 8 дней. Те самые ошибки, на которые я потратил 2 месяца, <strong>в клубе закрыты с первого дня.</strong></p>
           </div>
         </Reveal>
       </section>
@@ -183,10 +183,10 @@ export default function StorySections() {
             </CtaButton>
             {!isInTelegram && (
               <div className="fluid-xs text-white/20 mt-3">
-                Откроется мой Telegram - там всё обсудим и оформим вступление
+                Откроется мой Telegram, там всё обсудим и оформим вступление
               </div>
             )}
-            <div className="fluid-xs text-white/15 mt-1">После 50 участников цена — 14 900 ₽</div>
+            <div className="fluid-xs text-white/15 mt-1">После 50 участников цена 14 900 ₽</div>
           </div>
         </div>
       </Reveal>
@@ -197,14 +197,14 @@ export default function StorySections() {
       <section className="section-spacing section-glow-cyan">
         <Reveal>
           <h2 className="font-oswald fluid-h2 font-bold mb-3">От нуля до денег за 4 шага</h2>
-          <p className="text-white/30 fluid-sm mb-8">Весь процесс — от создания персонажа до первого дохода</p>
+          <p className="text-white/30 fluid-sm mb-8">Весь процесс от создания персонажа до первого дохода</p>
         </Reveal>
 
         <div className="space-y-3 mb-6">
           {[
-            { n: "01", title: "Создаёшь лицо", text: "Нейросеть смешивает черты нескольких людей и создаёт нового, уникального человека. Этого человека не существует.", time: "10–15 мин" },
-            { n: "02", title: "Обучаешь нейросеть", text: "Создаёшь набор фото персонажа в разных ракурсах. После этого нейросеть воспроизводит лицо стабильно.", time: "1–2 часа" },
-            { n: "03", title: "Генерируешь контент", text: "Фотосессии, видео — танцы, повороты, ходьба. Всё на облачных серверах за $1–2 в час. За одну сессию — контент на месяц.", time: "2–3 часа" },
+            { n: "01", title: "Создаёшь лицо", text: "Нейросеть смешивает черты нескольких людей и создаёт нового, уникального человека. Этого человека не существует.", time: "10-15 мин" },
+            { n: "02", title: "Обучаешь нейросеть", text: "Создаёшь набор фото персонажа в разных ракурсах. После этого нейросеть воспроизводит лицо стабильно.", time: "1-2 часа" },
+            { n: "03", title: "Генерируешь контент", text: "Фотосессии, видео: танцы, повороты, ходьба. Всё на облачных серверах за $1-2 в час. За одну сессию контент на месяц.", time: "2-3 часа" },
             { n: "04", title: "Строишь аудиторию", text: "Контент в TikTok и Instagram по системе прогрева. Аудитория растёт → часть переходит на платные площадки → деньги.", time: "∞" },
           ].map((s, i) => (
             <Reveal key={s.n} delay={i * 80}>
@@ -224,7 +224,7 @@ export default function StorySections() {
 
         <Reveal>
           <div className="text-center py-5 rounded-lg font-oswald fluid-sm tracking-wider" style={{ background: 'linear-gradient(135deg, rgba(0,255,136,0.06), rgba(0,229,255,0.04))', border: '1px solid rgba(0,255,136,0.12)', color: '#00ff88' }}>
-            Стоимость запуска одного персонажа от нуля до первого видео: $15–20
+            Стоимость запуска одного персонажа от нуля до первого видео: $15-20
           </div>
         </Reveal>
       </section>
@@ -234,20 +234,20 @@ export default function StorySections() {
       {/* ===== 6. ГДЕ ПОДВОХ ===== */}
       <section className="section-spacing">
         <Reveal>
-          <h2 className="font-oswald fluid-h2 font-bold mb-3">Создать персонажа — это 10% дела</h2>
-          <p className="text-white/30 fluid-sm mb-8">Остальные 90% — привлечь аудиторию и превратить её в деньги</p>
+          <h2 className="font-oswald fluid-h2 font-bold mb-3">Создать персонажа это всего 10% дела</h2>
+          <p className="text-white/30 fluid-sm mb-8">Остальные 90%: привлечь аудиторию и превратить её в деньги</p>
         </Reveal>
 
         <Reveal>
           <div className="space-y-3 mb-6">
             {[
-              "Сделал красивый контент — а куда его, с какой стратегией?",
-              "Выложил в TikTok — аккаунт заблокировали. Без прогрева это вопрос дней.",
-              "Набрал подписчиков — человек написал «привет», промолчал. Он ушёл.",
-              "Делаешь контент — но не знаешь что сейчас залетает.",
+              "Сделал красивый контент, а куда его, с какой стратегией?",
+              "Выложил в TikTok, аккаунт заблокировали. Без прогрева это вопрос дней.",
+              "Набрал подписчиков, человек написал «привет», промолчал. Он ушёл.",
+              "Делаешь контент, но не знаешь что сейчас залетает.",
             ].map(t => (
               <div key={t} className="flex items-start gap-2.5">
-                <span className="text-white/15 mt-0.5 flex-shrink-0">—</span>
+                <span className="text-white/15 mt-0.5 flex-shrink-0">·</span>
                 <p className="text-white/45 fluid-sm">{t}</p>
               </div>
             ))}
@@ -256,7 +256,7 @@ export default function StorySections() {
 
         <Reveal>
           <div className="pull-quote my-8">
-            <P accent>Умение создавать контент без системы продвижения и заработка — хобби. С системой — бизнес.</P>
+            <P accent>Умение создавать контент без системы продвижения и заработка это хобби. С системой это бизнес.</P>
           </div>
         </Reveal>
       </section>
@@ -266,14 +266,14 @@ export default function StorySections() {
       {/* ===== 7. ЧТО ВНУТРИ ===== */}
       <section className="section-spacing section-glow-green">
         <Reveal>
-          <h2 className="font-oswald fluid-h2 font-bold mb-3">Всё что нужно для старта — уже готово</h2>
-          <p className="text-white/30 fluid-sm mb-8">Не курс с видео. Закрытый клуб с системой, шаблонами и поддержкой. Зашёл — делаешь.</p>
+          <h2 className="font-oswald fluid-h2 font-bold mb-3">Всё что нужно для старта уже готово</h2>
+          <p className="text-white/30 fluid-sm mb-8">Не курс с видео. Закрытый клуб с системой, шаблонами и поддержкой. Зашёл и делаешь.</p>
         </Reveal>
 
         {/* Locked preview */}
         <Reveal>
           <div className="relative my-8 rounded-xl overflow-hidden" style={{ border: '1px solid rgba(0,255,136,0.15)' }}>
-            {/* Скрин — видно ~60%, остальное размыто */}
+            {/* Скрин: видно ~60%, остальное размыто */}
             <div className="relative" style={{ height: 'clamp(260px, 45vw, 400px)', overflow: 'hidden' }}>
               <img src="https://cdn.poehali.dev/projects/619405aa-a78f-42cb-a5c0-ba86a35c55a1/bucket/3c947c91-977a-4192-9165-8955fe270d9d.png" alt="Структура клуба AI Models Factory" className="w-full h-full object-cover object-top" />
               {/* Градиентное размытие снизу */}
@@ -295,7 +295,7 @@ export default function StorySections() {
             </div>
             {/* Подпись */}
             <div className="px-4 py-3" style={{ background: 'rgba(0,0,0,0.5)', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
-              <div className="fluid-xs font-oswald tracking-wider uppercase text-white/45">AI Models Factory — закрытый клуб в Telegram</div>
+              <div className="fluid-xs font-oswald tracking-wider uppercase text-white/45">AI Models Factory · закрытый клуб в Telegram</div>
               <div className="fluid-xs text-white/20 mt-0.5">35 участников · от программистов до бухгалтеров · Москва, Берлин, весь мир</div>
             </div>
           </div>
@@ -303,13 +303,13 @@ export default function StorySections() {
 
         <div className="space-y-3 mb-6">
           {[
-            { title: "Создание персонажа с нуля", text: "Пошаговые видео. От регистрации до готового лица — за первый день." },
-            { title: "Прогрев TikTok и Instagram", text: "План на 14 дней — что постить, когда, сколько. Без этого бан на первой неделе." },
-            { title: "Контент для взрослых площадок", text: "80% дохода — контент 18+. Легально, на специализированных платформах. Готовые инструкции." },
+            { title: "Создание персонажа с нуля", text: "Пошаговые видео. От регистрации до готового лица за первый день." },
+            { title: "Прогрев TikTok и Instagram", text: "План на 14 дней: что постить, когда, сколько. Без этого бан на первой неделе." },
+            { title: "Контент для взрослых площадок", text: "80% дохода приносит контент 18+. Легально, на специализированных платформах. Готовые инструкции." },
             { title: "Шаблоны генерации", text: "Готовые настройки для фото и видео, которые я собирал 4 месяца. Обновляются постоянно." },
             { title: "Система монетизации", text: "Воронка: как привлечь подписчиков, как удерживать, как масштабировать доход." },
-            { title: "Скрипты общения", text: "Готовые сценарии — что писать, когда, как превращать подписчиков в платящих. Это утроило мой доход." },
-            { title: "Инструменты автоматизации", text: "Система которая сама находит тренды и предлагает идеи для контента. Обновления — первыми." },
+            { title: "Скрипты общения", text: "Готовые сценарии: что писать, когда, как превращать подписчиков в платящих. Это утроило мой доход." },
+            { title: "Инструменты автоматизации", text: "Система которая сама находит тренды и предлагает идеи для контента. Обновления получаешь первым." },
             { title: "Закрытый чат + моя поддержка", text: "Вопросы возникают постоянно. Вместе разбираемся быстрее. Я лично отвечаю." },
           ].map((item, i) => (
             <Reveal key={i} delay={i * 50}>

@@ -23,7 +23,7 @@ export default function CtaSections() {
             <div className="rounded-xl card-padding-lg" style={{ background: 'rgba(0,255,136,0.03)', border: '1px solid rgba(0,255,136,0.1)' }}>
               <div className="fluid-xs font-oswald tracking-widest uppercase mb-4" style={{ color: 'rgba(0,255,136,0.6)' }}>Подходит</div>
               <div className="space-y-2.5">
-                {["Есть 2–3 часа в день", "$50–70 на запуск модели", "Готов разбираться 2–3 недели", "Хочешь доход без привязки к лицу и месту", "Не боишься нового"].map(t => (
+                {["Есть 2-3 часа в день", "$50-70 на запуск модели", "Готов разбираться 2-3 недели", "Хочешь доход без привязки к лицу и месту", "Не боишься нового"].map(t => (
                   <div key={t} className="flex items-start gap-2">
                     <Icon name="Check" size={13} className="flex-shrink-0 mt-0.5" style={{ color: '#00ff88' } as React.CSSProperties} />
                     <span className="text-white/50 fluid-xs">{t}</span>
@@ -58,7 +58,7 @@ export default function CtaSections() {
         <Reveal>
           <div className="rounded-xl overflow-hidden mb-4" style={{ border: '1px solid rgba(255,255,255,0.05)' }}>
             <div className="fluid-xs font-oswald tracking-widest uppercase text-white/25 px-5 pt-4 pb-2">Запуск одной модели</div>
-            {[["VPN", "$5–10"], ["Облачный сервер", "$15–20"], ["Регистрация на площадке", "$30–40"]].map(([l, v]) => (
+            {[["VPN", "$5-10"], ["Облачный сервер", "$15-20"], ["Регистрация на площадке", "$30-40"]].map(([l, v]) => (
               <div key={l} className="flex justify-between px-5 py-3" style={{ borderTop: '1px solid rgba(255,255,255,0.03)' }}>
                 <span className="text-white/45 fluid-sm">{l}</span>
                 <span className="text-white/75 fluid-sm font-oswald">{v}</span>
@@ -66,7 +66,7 @@ export default function CtaSections() {
             ))}
             <div className="flex justify-between px-5 py-3 font-medium" style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.015)' }}>
               <span className="text-white/65 fluid-sm">Итого на старт</span>
-              <span className="text-white fluid-sm font-oswald">$50–70</span>
+              <span className="text-white fluid-sm font-oswald">$50-70</span>
             </div>
           </div>
         </Reveal>
@@ -74,7 +74,7 @@ export default function CtaSections() {
         <Reveal>
           <div className="rounded-xl overflow-hidden mb-6" style={{ border: '1px solid rgba(255,255,255,0.05)' }}>
             <div className="fluid-xs font-oswald tracking-widest uppercase text-white/25 px-5 pt-4 pb-2">Ежемесячно</div>
-            {[["Сервер (пара часов)", "$3–5"], ["VPN", "$5–10"]].map(([l, v]) => (
+            {[["Сервер (пара часов)", "$3-5"], ["VPN", "$5-10"]].map(([l, v]) => (
               <div key={l} className="flex justify-between px-5 py-3" style={{ borderTop: '1px solid rgba(255,255,255,0.03)' }}>
                 <span className="text-white/45 fluid-sm">{l}</span>
                 <span className="text-white/75 fluid-sm font-oswald">{v}</span>
@@ -82,7 +82,7 @@ export default function CtaSections() {
             ))}
             <div className="flex justify-between px-5 py-3 font-medium" style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.015)' }}>
               <span className="text-white/65 fluid-sm">Итого в месяц</span>
-              <span className="text-white fluid-sm font-oswald">~$10–15</span>
+              <span className="text-white fluid-sm font-oswald">~$10-15</span>
             </div>
           </div>
         </Reveal>
@@ -93,7 +93,7 @@ export default function CtaSections() {
 
           {/* Mobile: карточки */}
           <div className="md:hidden space-y-2 mb-6">
-            {[["Цена", "бесплатно", "30–50k ₽", "9 900 ₽"], ["Поддержка", "нет", "на время курса", "навсегда"], ["Обновления", "нет", "нет", "бесплатно"], ["Автоматизация", "нет", "нет", "да"], ["Шаблоны", "нет", "базовые", "все мои"], ["Скрипты общения", "нет", "нет", "готовые"], ["Срок до результата", "месяцы", "месяц", "дни"]].map(([label, s, k, c], i) => (
+            {[["Цена", "бесплатно", "30-50k ₽", "9 900 ₽"], ["Поддержка", "нет", "на время курса", "навсегда"], ["Обновления", "нет", "нет", "бесплатно"], ["Автоматизация", "нет", "нет", "да"], ["Шаблоны", "нет", "базовые", "все мои"], ["Скрипты общения", "нет", "нет", "готовые"], ["Срок до результата", "месяцы", "месяц", "дни"]].map(([label, s, k, c], i) => (
               <div key={i} className="rounded-lg px-4 py-3 flex items-center justify-between gap-3" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.04)' }}>
                 <span className="fluid-xs text-white/40 flex-1 min-w-0">{label}</span>
                 <div className="flex items-center gap-3 flex-shrink-0">
@@ -112,7 +112,7 @@ export default function CtaSections() {
               <div className="text-white/25 text-center">Курсы</div>
               <div className="text-center" style={{ color: '#00ff88' }}>Клуб</div>
             </div>
-            {[["Цена", "бесплатно", "30–50k ₽", "9 900 ₽"], ["Поддержка", "нет", "на время курса", "навсегда"], ["Обновления", "нет", "нет", "бесплатно"], ["Автоматизация", "нет", "нет", "да"], ["Шаблоны", "нет", "базовые", "все мои"], ["Скрипты общения", "нет", "нет", "готовые"], ["Срок до результата", "месяцы", "месяц", "дни"]].map(([label, s, k, c], i) => (
+            {[["Цена", "бесплатно", "30-50k ₽", "9 900 ₽"], ["Поддержка", "нет", "на время курса", "навсегда"], ["Обновления", "нет", "нет", "бесплатно"], ["Автоматизация", "нет", "нет", "да"], ["Шаблоны", "нет", "базовые", "все мои"], ["Скрипты общения", "нет", "нет", "готовые"], ["Срок до результата", "месяцы", "месяц", "дни"]].map(([label, s, k, c], i) => (
               <div key={i} className="grid grid-cols-4 fluid-xs px-4 py-2.5" style={{ borderBottom: '1px solid rgba(255,255,255,0.025)' }}>
                 <div className="text-white/40">{label}</div>
                 <div className="text-white/25 text-center">{s}</div>
@@ -133,7 +133,7 @@ export default function CtaSections() {
         </Reveal>
         <Reveal>
           <div className="space-y-3 mb-6">
-            {["Нет гарантий конкретного дохода. Кто обещает — врёт.", "Нет «нажми кнопку и получи деньги». Первые 2–3 недели нужно погрузиться.", "Это бизнес с порогом входа $50 — не волшебство, но и не миллионы на франшизу."].map(t => (
+            {["Нет гарантий конкретного дохода. Кто обещает, тот врёт.", "Нет «нажми кнопку и получи деньги». Первые 2-3 недели нужно погрузиться.", "Это бизнес с порогом входа $50. Не волшебство, но и не миллионы на франшизу."].map(t => (
               <div key={t} className="flex items-start gap-2.5">
                 <span className="text-red-400/40 mt-0.5 flex-shrink-0 text-xs">✕</span>
                 <p className="text-white/40 fluid-sm">{t}</p>
@@ -163,12 +163,12 @@ export default function CtaSections() {
         <Reveal>
           <div className="mb-8">
             {[
-              { q: "Это легально?", a: "Да. Ты создаёшь полностью вымышленного персонажа — ничьё реальное лицо не используется. Площадки (Fanvue, Patreon и другие) имеют правила для AI-контента и позволяют его размещать." },
-              { q: "Я не технарь. Смогу?", a: "В клубе 35 человек — среди них бухгалтеры, менеджеры, фрилансеры. Все инструкции на видео. Если умеешь скачать приложение — справишься." },
-              { q: "Почему так дёшево?", a: "Мне не нужно окупать продюсерскую команду и отдел продаж. Я один. Мне важнее собрать сильное сообщество — это делает клуб ценнее для всех." },
-              { q: "А если не получится?", a: "Возможно. Но: все ошибки на которые я потратил 2 месяца — в клубе закрыты с первого дня. Готовая система + 35 человек рядом. Шансы выше." },
-              { q: "Сколько реально можно заработать?", a: "Мой результат: $1,875 за 3 месяца с одной модели. Другие на рынке: от $2,500/мес у начинающих до $10,000–23,000/мес у тех кто полгода+." },
-              { q: "Нужен мощный компьютер?", a: "Нет. Генерация на облачных серверах за $1–2 в час. Нужен только ноутбук с интернетом." },
+              { q: "Это легально?", a: "Да. Ты создаёшь полностью вымышленного персонажа. Ничьё реальное лицо не используется. Площадки (Fanvue, Patreon и другие) имеют правила для AI-контента и позволяют его размещать." },
+              { q: "Я не технарь. Смогу?", a: "В клубе 35 человек. Среди них бухгалтеры, менеджеры, фрилансеры. Все инструкции на видео. Если умеешь скачать приложение, справишься." },
+              { q: "Почему так дёшево?", a: "Мне не нужно окупать продюсерскую команду и отдел продаж. Я один. Мне важнее собрать сильное сообщество. Это делает клуб ценнее для всех." },
+              { q: "А если не получится?", a: "Возможно. Но все ошибки на которые я потратил 2 месяца, в клубе закрыты с первого дня. Готовая система плюс 35 человек рядом. Шансы выше." },
+              { q: "Сколько реально можно заработать?", a: "Мой результат: $1,875 за 3 месяца с одной модели. Другие на рынке: от $2,500/мес у начинающих до $10,000 и $23,000/мес у тех кто полгода+." },
+              { q: "Нужен мощный компьютер?", a: "Нет. Генерация на облачных серверах за $1-2 в час. Нужен только ноутбук с интернетом." },
             ].map((item, i) => (
               <FAQItem key={i} q={item.q} a={item.a} open={faqOpen === i} onClick={() => setFaqOpen(faqOpen === i ? null : i)} />
             ))}
@@ -201,7 +201,7 @@ export default function CtaSections() {
               <span className="font-oswald font-bold gradient-text" style={{ fontSize: 'clamp(3rem, 4vw + 1rem, 5rem)' }}>9 900 ₽</span>
             </div>
             <div className="text-white/50 fluid-body mb-1">Один раз. Навсегда.</div>
-            <div className="text-white/25 fluid-sm max-w-lg mx-auto">Заплатил один раз — получил всё. Обновления, новые инструменты, поддержка — навсегда.</div>
+            <div className="text-white/25 fluid-sm max-w-lg mx-auto">Заплатил один раз, получил всё. Обновления, новые инструменты, поддержка на всю жизнь.</div>
           </div>
         </Reveal>
 
@@ -213,8 +213,8 @@ export default function CtaSections() {
                 <Icon name="Send" size={28} style={{ color: '#000' } as React.CSSProperties} />
                 <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-green-400 border-2 border-background animate-pulse" />
               </div>
-              <div className="font-oswald fluid-body font-bold mb-2">Вступить в клуб — 9 900 ₽</div>
-              <p className="fluid-xs text-white/35 max-w-xs mx-auto">Нажми кнопку ниже — откроется мой личный диалог в Telegram. Там обсудим детали и оформим вступление</p>
+              <div className="font-oswald fluid-body font-bold mb-2">Вступить в клуб за 9 900 ₽</div>
+              <p className="fluid-xs text-white/35 max-w-xs mx-auto">Нажми кнопку ниже. Откроется мой личный диалог в Telegram. Там обсудим детали и оформим вступление</p>
             </div>
 
             {/* TG button */}
@@ -223,13 +223,13 @@ export default function CtaSections() {
                 Начать зарабатывать <Icon name="ArrowRight" size={18} />
               </CtaButton>
               {!isInTelegram && (
-                <p className="fluid-xs text-white/25 text-center mt-3">Нажми - откроется мой диалог в Telegram</p>
+                <p className="fluid-xs text-white/25 text-center mt-3">Нажми, откроется мой диалог в Telegram</p>
               )}
             </div>
           </div>
         </Reveal>
 
-        <p className="fluid-xs text-white/15 text-center mt-8 max-w-md mx-auto">Результаты — мой личный опыт. Ваш результат зависит от вложенных усилий, времени и рыночных условий.</p>
+        <p className="fluid-xs text-white/15 text-center mt-8 max-w-md mx-auto">Результаты это мой личный опыт. Ваш результат зависит от вложенных усилий, времени и рыночных условий.</p>
       </section>
 
       {/* FOOTER */}

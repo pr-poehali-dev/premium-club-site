@@ -75,7 +75,7 @@ export default function HeroSection() {
             </Reveal>
             <Reveal delay={350}>
               <p className="text-white/25 fluid-xs max-w-lg mb-4">
-                Мой результат: $745 за 8 дней в апреле - $1,875 за 3 месяца - одна модель
+                Мой результат: $745 за 8 дней в апреле. $1,875 за 3 месяца. Одна модель.
               </p>
             </Reveal>
             <Reveal delay={450}>
@@ -99,7 +99,7 @@ export default function HeroSection() {
         {/* Dashboard preview */}
         <div className="absolute bottom-16 right-8 hidden lg:block w-72 xl:w-80 float">
           <div className="screenshot-frame rounded-lg overflow-hidden opacity-60"><img src={DASHBOARD_IMG} alt="" className="w-full" /></div>
-          <div className="text-center mt-2 fluid-xs text-white/15 font-oswald tracking-wider uppercase">Реальный доход - апрель 2026</div>
+          <div className="text-center mt-2 fluid-xs text-white/15 font-oswald tracking-wider uppercase">Реальный доход · апрель 2026</div>
         </div>
 
         {/* Scroll indicator */}
